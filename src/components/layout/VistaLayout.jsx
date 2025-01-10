@@ -40,54 +40,62 @@ const VistaLayout = () => {
 
   return (
     <div className="h-screen relative overflow-hidden select-none">
-      {/* Background gradients */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-sky-400 via-sky-300 to-green-400 pointer-events-none" />
-      <div className="absolute bottom-0 left-0 right-0 h-1/2 -z-10 bg-gradient-to-b from-green-400 to-green-600 transform skew-y-3 pointer-events-none" />
-      <div className="absolute bottom-0 left-0 right-0 h-1/3 -z-10 bg-gradient-to-b from-green-600 to-green-800 transform -skew-y-2 pointer-events-none" />
-     
-      {/* Desktop Icons Area */}
-      <div className="absolute top-0 left-0 w-48 z-30">
-        <DesktopIcon
-          title="CINCO™ Credit Union"
-          path="/CincoCreditUnion"
-          className="top-8 left-8"
-          imagePath="/images/VistaLayoutImages/CICUicon.png"
-        />
-        <DesktopIcon
-          title="CINCO™ Identity Generator 2.5"
-          path="/CincoIdentityGenerator"
-          className="top-40 left-8"
-          imagePath="/images/VistaLayoutImages/IdentityGeneratoricon.png"
-        />
-        <DesktopIcon
-          title="CINCO™ MIDI Organizer"
-          path="/CincoMIDIOrganizer"
-          className="top-80 left-8"
-          imagePath="/images/VistaLayoutImages/MidiIcon.png"
-        />
-        <DesktopIcon
-          title="CINCO™ e-Trial"
-          path="/CincoETrial"
-          className="top-8 left-32"
-          imagePath="/images/VistaLayoutImages/CincoETrial.png"
-        />
-        <DesktopIcon
-          title="CINCO™ Facts Machine"
-          path="/CincoFactsMachine"
-          className="top-40 left-32"
-          imagePath="/images/VistaLayoutImages/CincoFactsMachine.png"
-        />
+      {/* Background with its own stacking context */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-gradient-to-b from-sky-400 via-sky-300 to-green-400" />
+        <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-b from-green-400 to-green-600 transform skew-y-3" />
+        <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-b from-green-600 to-green-800 transform -skew-y-2" />
       </div>
-     
-      {/* Main Window Content */}
-      <div className="relative h-full p-4 pb-20">
-        <div className="h-full w-[960px] mx-auto bg-blue-100 rounded shadow-xl flex flex-col overflow-hidden border-2 border-blue-400">
-          <TitleBar title="Innernette 2.5 Brought to you by CINCO!" />
-          <AddressBar currentPath={currentPath} />
-          <div className="flex-grow bg-blue-200 overflow-y-auto content-area">
-            <Outlet />
+
+      {/* Desktop layer */}
+      <div className="absolute inset-0 z-10">
+        {/* Desktop Icons Area */}
+        <div className="absolute top-0 left-0 w-48">
+          <DesktopIcon
+            title="CINCO™ Credit Union"
+            path="/CincoCreditUnion"
+            className="top-8 left-8"
+            imagePath="/images/VistaLayoutImages/CICUicon.png"
+          />
+          <DesktopIcon
+            title="CINCO™ Identity Generator 2.5"
+            path="/CincoIdentityGenerator"
+            className="top-40 left-8"
+            imagePath="/images/VistaLayoutImages/IdentityGeneratoricon.png"
+          />
+          <DesktopIcon
+            title="CINCO™ MIDI Organizer"
+            path="/CincoMIDIOrganizer"
+            className="top-80 left-8"
+            imagePath="/images/VistaLayoutImages/MidiIcon.png"
+          />
+          <DesktopIcon
+            title="CINCO™ e-Trial"
+            path="/CincoETrial"
+            className="top-8 left-32"
+            imagePath="/images/VistaLayoutImages/CincoETrial.png"
+          />
+          <DesktopIcon
+            title="CINCO™ Facts Machine"
+            path="/CincoFactsMachine"
+            className="top-40 left-32"
+            imagePath="/images/VistaLayoutImages/CincoFactsMachine.png"
+          />
+        </div>
+      </div>
+
+      {/* Window layer - higher z-index, creates new stacking context */}
+      <div className="absolute inset-0 z-20 pointer-events-none">
+        <div className="h-full p-4 pb-20">
+          {/* Main window with pointer events re-enabled */}
+          <div className="h-full w-[960px] mx-auto bg-blue-100 rounded shadow-xl flex flex-col overflow-hidden border-2 border-blue-400 pointer-events-auto">
+            <TitleBar title="Innernette 2.5 Brought to you by CINCO!" />
+            <AddressBar currentPath={currentPath} />
+            <div className="flex-grow bg-blue-200 overflow-y-auto content-area">
+              <Outlet />
+            </div>
+            <Taskbar />
           </div>
-          <Taskbar />
         </div>
       </div>
     </div>

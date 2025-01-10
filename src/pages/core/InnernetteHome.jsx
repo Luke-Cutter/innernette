@@ -78,7 +78,7 @@ const InnernetteHome = () => {
     {
       name: "B'Owl",
       description: "Part bat, part owl. Paint your B'Owl lips! Your pets will look at B'Owl. Put B'Owl in the trunk of your car and forget it! Perfect for throwing away!",
-      image: "/images/pages/categories/core/InnernetteHome//bowl.png",
+      image: "/images/pages/categories/core/InnernetteHome/bowl.png",
       warning: "Do not feed your B'Owl. It is not a real owl.",
       price: "Only 6 payments of $19.99 from CINCO™ Toys",
       isNew: true
@@ -86,7 +86,7 @@ const InnernetteHome = () => {
     {
       name: "Cinco™ E-Trial",
       description: "The new solution to boring trials, do it in the comfort of your own home! Trusted and used by Terry Cinco.",
-      image: "/images/pages/categories/core/InnernetteHome//etrial.png",
+      image: "/images/pages/categories/core/InnernetteHome/etrial.png",
       warning: "All verdicts are legally binding and MAY result in jail time",
       price: "Special offer: 3 payments of $33.33",
       isNew: false
@@ -94,7 +94,7 @@ const InnernetteHome = () => {
     {
       name: "CINCO™ C-Fone ",
       description: "Only one button for dialing, this phone cannot receive calls only make them! Harness the cutting-edge with our 2 Antennaes for improved reception.",
-      image: "/images/pages/categories/core/InnernetteHome//c-phone.png",
+      image: "/images/pages/categories/core/InnernetteHome/c-phone.png",
       warning: "Use the CINCO™ Cooling Gel for burns!",
       price: "Just 4 easy payments of $25.99",
       isNew: true
@@ -130,7 +130,7 @@ const InnernetteHome = () => {
       <div className="bg-gradient-to-r from-blue-100 via-purple-100 to-blue-100 p-6 rounded-lg mb-8">
         <div className="flex gap-8 items-center">
           <img 
-            src="/images/pages/categories/core/InnernetteHome//theinnernette.jpg" 
+            src="/images/pages/categories/core/InnernetteHome/theinnernette.jpg" 
             alt="Innernette CD-ROM"
             className="w-[400px] h-[300px] object-cover rounded border-4 border-white shadow-lg" 
           />

@@ -1,3 +1,22 @@
+# Welcome to the Innernette, a Tim and Eric experience site by Luke Cutter
+
+
+## What is the Innernette?
+
+The Innernette is based off a sketch from Season 2, Episode 8 episode "The Innernette". It is a 103+ page love letter to Tim and Eric: Awesome Show, Great Job! 
+See your favorite sketches come to life in this fictional version of Cinco's vision for a truly offline internet. 
+
+- Go on eTrial and get tried as Terry Cinco
+- See Paul Rudd Dance in the Cinco Identity Generator
+- Get some Stark on Stark action
+- Make some tunes in the CINCO Muzik Mayker
+- Listen to your favorite song "Funk Barn" by the Jeff GoldBluMan Group (All other songs were pulled after Lynn Cinco's untimely death)
+- Shop on the Innernette Shopping Mall
+
+# BUT THAT'S NOT QUALL
+Come and experience it for yourself and get immersed in the Tim and Eric weirdness, order Minidisk #2 and recieve a FREE CINCO MIDI Organizer (with patented Tulley Toggle). **All Minidisks are $19.99 and take 47 weeks to ship**
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

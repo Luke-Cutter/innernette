@@ -1,4 +1,4 @@
-# Welcome to the Innernette, a Tim and Eric experience site by Luke Cutter
+# Welcome to the Innernette, a Tim and Eric Experience by Luke Cutter
 
 
 ## What is the Innernette?

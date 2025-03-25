@@ -1,4 +1,7 @@
 # Welcome to the Innernette, a Tim and Eric Experience by Luke Cutter
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/5d6fd773-93d3-458a-beb4-6abbf8a0abbf" />
+</p>
 
 
 ## What is the Innernette?

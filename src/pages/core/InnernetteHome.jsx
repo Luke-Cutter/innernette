@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { AlertTriangle, Star, Sparkles, Trophy} from 'lucide-react';
+import { AlertTriangle, Newspaper, Star, Sparkles, Trophy, Mail, Clock } from 'lucide-react';
 import CategoryButton from '../../components/common/CategoryButton';
 
+// Badges and components
 const NewBadge = () => (
   <div className="absolute -top-3 -right-3 bg-red-500 text-white px-3 py-1 rounded-full transform rotate-12 text-sm font-bold shadow-lg border-2 border-red-600">
     NEW!
@@ -9,13 +10,22 @@ const NewBadge = () => (
 );
 
 const GreatJobBadge = () => (
-  <div className="absolute -top-4  -right-10 bg-green-500 text-white px-3 py-1 rounded-full transform rotate-12 text-sm font-bold shadow-lg border-2 border-blue-600">
+  <div className="absolute -top-4 -right-10 bg-green-500 text-white px-3 py-1 rounded-full transform rotate-12 text-sm font-bold shadow-lg border-2 border-blue-600">
     Great Job!
   </div>
 );
 
 const InnernetteHome = () => {
   const [testimonialIndex, setTestimonialIndex] = useState(0);
+  const [blinkEffect, setBlinkEffect] = useState(false);
+  
+  // Simulated cursor blink effect
+  useEffect(() => {
+    const blinkInterval = setInterval(() => {
+      setBlinkEffect(prev => !prev);
+    }, 600);
+    return () => clearInterval(blinkInterval);
+  }, []);
   
   const categories = [
     { 
@@ -23,7 +33,7 @@ const InnernetteHome = () => {
       path: '/Channel5HomePage',
       color: 'bg-red-300',
       border: 'border-red-400',
-      icon: <Star className="w-4 h-4" />
+      icon: <Newspaper className="w-4 h-4" />
     },
     {
       name: ['CINCO &', 'Subsidiaries'],
@@ -56,13 +66,15 @@ const InnernetteHome = () => {
   ];
 
   const testimonials = [
-    "Thanks to The Innernette, I haven't needed real internet in weeks! - Bob O.",
+    "Thanks to The Innernette™, I haven't needed real internet in weeks! - Bob O.",
     "I really feel 100% Secure!- Tim H.",
     "My computer hasn't caught a virus since installing! - Dr. Steve Brule",
     "Great for keeping the kids away from dangerous online websites! - Jan B.",
     "No more waiting for pages to load! - Tim H.",
-    "I love browsing all 103 websites! - Eric W.", 
-    "What a fresh new way to check out sites, buy clothing, and surf music all located on this tiny CD-ROM! - Eric W.",
+    "I love browsing all 103 websites! - Merv P.", 
+    "I like to check out sites, buy clothing, and surf music! Thanks Innernette™! - Eric W.",
+    "Don't come home Casey- Deborah T.",
+    "I threw my modem in the trash! Who needs it? - Terry C."
   ];
 
   const rotateTestimonial = useCallback(() => {
@@ -101,13 +113,35 @@ const InnernetteHome = () => {
     }
   ];
 
+  // Time-limited offer countdown
+  const [timeLeft, setTimeLeft] = useState(3600); // 1 hour in seconds
+  
+  useEffect(() => {
+    if (timeLeft > 0) {
+      const timer = setTimeout(() => setTimeLeft(timeLeft - 1), 1000);
+      return () => clearTimeout(timer);
+    }
+  }, [timeLeft]);
+  
+  const formatTime = (seconds) => {
+    const mins = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+  };
+
   return (
-    <div className="p-8 relative bg-blue-200">
+    <div className="p-8 relative" style = {{
+      backgroundColor: "#b0d5f5",
+      backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80' width='80' height='80'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M0 0h80v80H0V0zm20 20v40h40V20H20zm20 35a15 15 0 1 1 0-30 15 15 0 0 1 0 30z' opacity='.5'%3E%3C/path%3E%3Cpath d='M15 15h50l-5 5H20v40l-5 5V15zm0 50h50V15L80 0v80H0l15-15zm32.07-32.07l3.54-3.54A15 15 0 0 1 29.4 50.6l3.53-3.53a10 10 0 1 0 14.14-14.14zM32.93 47.07a10 10 0 1 1 14.14-14.14L32.93 47.07z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E")`,
+      backgroundPosition: 'center'
+    }}>
+
       {/* Header Section */}
-      <div className="text-center mb-8">
+      <div className="text-center bg-white mb-6 border-2 border-blue-700 rounded-lg">
         <div className="relative inline-block">
           <h1 className="text-6xl italic font-light text-black mb-2">
             Welcome to the Innernette!
+            <span className={blinkEffect ? 'opacity-100' : 'opacity-0'}>_</span>
           </h1>
           <GreatJobBadge />
         </div>
@@ -116,18 +150,38 @@ const InnernetteHome = () => {
           <br />
           brought to you by CINCO™
         </div>
-        <div className="text-sm bg-gradient-to-r from-yellow-200 via-red-200 to-yellow-200 p-2 rounded inline-block">
+        <div className="text-sm bg-gradient-to-r from-yellow-200 via-red-200 to-yellow-200 p-2 mb-4 rounded inline-block">
           Version 2.5 - Now with 103 pre-installed websites!
         </div>
       </div>
 
+      {/* Time-Limited Offer Counter */}
+      <div className="bg-gradient-to-r border-t-2 border-l-2 border-r-2 border-pink-600 from-red-400 to-pink-500 p-3 rounded-t-lg text-white text-center">
+        <div className="flex justify-center items-center gap-3">
+          <Clock className="w-6 h-6 animate-pulse" />
+          <div className="font-bold">SPECIAL OFFER EXPIRES IN: {formatTime(timeLeft)}</div>
+          <Clock className="w-6 h-6 animate-pulse" />
+        </div>
+      </div>
+
       {/* Testimonial */}
-      <div className="bg-white p-4 rounded-lg mb-8 text-center">
-        <p className="text-gray-600 italic">"{testimonials[testimonialIndex]}"</p>
+      <div className="bg-white border-b-2 border-l-2 border-r-2 border-green-400 p-4 rounded-b-lg mb-8 text-center">
+        <p className="text-black italic font-mono">
+          &gt; "{testimonials[testimonialIndex]}"
+        </p>
       </div>
 
       {/* Featured Product Banner - Main Image: 400x300px */}
-      <div className="bg-gradient-to-r from-blue-100 via-purple-100 to-blue-100 p-6 rounded-lg mb-8">
+      <div 
+        className="bg-gradient-to-r from-green-200 via-yellow-100 to-green-200 p-6 rounded-lg mb-8 border-2 border-green-200" 
+        style={{
+          backgroundImage: `
+            linear-gradient(to right, rgba(167, 243, 208, 1), rgba(254, 249, 195, 1), rgba(167, 243, 208, 1)),
+            url("data:image/svg+xml,%3Csvg width='24' height='20' viewBox='0 0 24 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 18c0-1.105.887-2 1.998-2 1.104 0 2-.895 2.002-1.994V14v6h-4v-2zM0 13.998C0 12.895.888 12 2 12c1.105 0 2 .888 2 2 0 1.105.888 2 2 2 1.105 0 2 .888 2 2v2H0v-6.002zm16 4.004A1.994 1.994 0 0 1 14 20c-1.105 0-2-.887-2-1.998v-4.004A1.994 1.994 0 0 0 10 12c-1.105 0-2-.888-2-2 0-1.105-.888-2-2-2-1.105 0-2-.887-2-1.998V1.998A1.994 1.994 0 0 0 2 0a2 2 0 0 0-2 2V0h8v2c0 1.105.888 2 2 2 1.105 0 2 .888 2 2 0 1.105.888 2 2 2 1.105 0 2-.888 2-2 0-1.105.888-2 2-2 1.105 0 2-.888 2-2V0h4v6.002A1.994 1.994 0 0 1 22 8c-1.105 0-2 .888-2 2 0 1.105-.888 2-2 2-1.105 0-2 .887-2 1.998v4.004z' fill='%23717073' fill-opacity='0.35' fill-rule='evenodd'/%3E%3C/svg%3E")
+          `,
+          backgroundPosition: 'center',
+          backgroundBlendMode: 'overlay'
+      }}>
         <div className="flex gap-8 items-center">
           <img 
             src="/images/pages/categories/core/InnernetteHome/theinnernette.jpg" 
@@ -161,6 +215,10 @@ const InnernetteHome = () => {
                 <Star className="w-4 h-4 text-yellow-500 mr-2" />
                 Shop at the Innernette™ Shopping Mall
               </li>
+              <li className="flex items-center">
+                <Star className="w-4 h-4 text-yellow-500 mr-2" />
+                Build your identity in CINCO™ Identity Generator 2.5
+              </li>
             </ul>
           </div>
         </div>
@@ -168,7 +226,7 @@ const InnernetteHome = () => {
 
       {/* Navigation Section */}
       <div className="mb-8">
-        <h2 className="text-lg font-bold mb-4 bg-yellow-200 p-2 rounded text-center -mt-3">
+        <h2 className="text-lg font-bold mb-4 bg-yellow-200 border-2 border-yellow-400 p-2 rounded text-center -mt-3">
           Choose What You Would Like to Offline Browse:
         </h2>
         <div className="grid mx-auto max-w-5xl grid-cols-5 gap-1 justify-items-center">
@@ -178,6 +236,7 @@ const InnernetteHome = () => {
               to={category.path}
               color={category.color}
               border={category.border}
+              className="transform transition-transform hover:scale-105"
             >
               <div className="flex flex-col items-center">
                 {category.icon}
@@ -199,7 +258,7 @@ const InnernetteHome = () => {
           IMPORTANT!
         </div>
         <div className="flex items-center gap-4">
-          <AlertTriangle className="w-8 h-8 text-red-500 flex-shrink-0" />
+          <AlertTriangle className="w-8 h-8 text-red-500 flex-shrink-0 animate-pulse" />
           <div>
             <p className="text-sm font-bold text-red-500 mb-1">WARNING:</p>
             <p className="text-sm">
@@ -213,12 +272,12 @@ const InnernetteHome = () => {
 
       {/* Featured Products - Product Images: 320x240px */}
       <div className="mb-8">
-        <h2 className="text-lg font-bold mb-4 bg-blue-200 p-2 rounded text-center">
+        <h2 className="text-lg font-bold mb-4 bg-white p-2 rounded text-center border-2 border-blue-300">
           New From CINCO™:
         </h2>
         <div className="grid grid-cols-3 gap-6">
           {featuredProducts.map((product, index) => (
-            <div key={index} className="bg-white rounded-lg border-2 border-blue-300 p-4 relative">
+            <div key={index} className="bg-white rounded-lg border-2 border-blue-300 p-4 relative hover:shadow-lg transition-shadow">
               {product.isNew && <NewBadge />}
               <img 
                 src={product.image} 
@@ -235,6 +294,32 @@ const InnernetteHome = () => {
               </div>
             </div>
           ))}
+        </div>
+      </div>
+
+      {/* Newsletter Signup */}
+      <div className="bg-purple-100 border-2 border-purple-300 p-4 rounded-lg mb-8" style = {{
+      backgroundImage: `url("data:image/svg+xml,%3Csvg width='84' height='48' viewBox='0 0 84 48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h12v6H0V0zm28 8h12v6H28V8zm14-8h12v6H42V0zm14 0h12v6H56V0zm0 8h12v6H56V8zM42 8h12v6H42V8zm0 16h12v6H42v-6zm14-8h12v6H56v-6zm14 0h12v6H70v-6zm0-16h12v6H70V0zM28 32h12v6H28v-6zM14 16h12v6H14v-6zM0 24h12v6H0v-6zm0 8h12v6H0v-6zm14 0h12v6H14v-6zm14 8h12v6H28v-6zm-14 0h12v6H14v-6zm28 0h12v6H42v-6zm14-8h12v6H56v-6zm0-8h12v6H56v-6zm14 8h12v6H70v-6zm0 8h12v6H70v-6zM14 24h12v6H14v-6zm14-8h12v6H28v-6zM14 8h12v6H14V8zM0 8h12v6H0V8z' fill='%23d791ea' fill-opacity='0.10' fill-rule='evenodd'/%3E%3C/svg%3E")`,
+      backgroundPosition: 'center'
+    }}>
+        <div className="flex items-center gap-4">
+          <Mail className="w-12 h-12 text-purple-600 flex-shrink-0" />
+          <div>
+            <h3 className="font-bold text-lg mb-2">JOIN THE INNERNETTE™ MAILING LIST!</h3>
+            <p className="text-sm mb-2">
+              Get updates about new CINCO™ products via regular mail! We'll send you a physical letter every month!
+            </p>
+            <div className="flex gap-2 mt-2">
+              <input 
+                type="text" 
+                placeholder="Your Mailing Address" 
+                className="p-2 border-2 border-gray-300 rounded flex-grow" 
+              />
+              <button className="bg-purple-500 text-white px-4 py-2 rounded font-bold hover:bg-purple-600">
+                SUBMIT
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -279,21 +364,34 @@ const InnernetteHome = () => {
       </div>
 
       {/* Order Now Section */}
-      <div className="bg-yellow-100 border-2 border-yellow-300 p-4 rounded-lg text-center relative">
-        <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-red-500 text-white px-2 py-1 rounded-full text-xs">
+      <div className="bg-gradient-to-r from-yellow-200 via-orange-200 to-yellow-200 border-2 border-yellow-400 p-4 rounded-lg text-center relative">
+        <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-red-500 text-white px-2 py-1 rounded-full text-xs animate-bounce">
           ORDER NOW!
         </div>
-        <p className="text-sm">
+        <p className="text-sm mb-2">
           Call Our Special Innernette™ hotline now to order your Innernette™ CD-ROM Expansion 2 through 31! Only 5 easy payments of $19.99 per Minidisc!
         </p>
+        <div className="bg-white inline-block px-6 py-2 rounded-lg border-2 border-red-400 my-3">
+          <span className="text-2xl font-bold">1-800-CINCO™-55</span>
+        </div>
         <p className="text-xs text-gray-600 mt-2">
-          1-800-CINCO™-55
-          <br />
           <span className="italic">
             (We may ignore your call based on past CINCO™ purchases)
           </span>
         </p>
+        
+        <div className="grid grid-cols-3 gap-4 mt-4">
+        </div>
+        {/* Footer bar */}
+      <div className="text-black p-2 mt-2 border-t-2 border-black mx-auto max-w-6xl">
+        <div className="flex justify-between">
+          <div className="text-xs">Memory: 61.3K (1 Gorb)</div>
+          <div className="text-xs">© CINCO™ Enterprises 2008</div>
+          <div className="text-xs">Battery: Endless</div>
+        </div>
       </div>
+      </div>
+      
     </div>
   );
 };

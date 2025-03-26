@@ -63,16 +63,19 @@ const CincoBowl = () => {
     },
     {
       text: "Found my B'owl in my basement trying to do a Dudley Dip. I distinctly remember throwing it into the ocean last week.",
+      image: "/images/pages/categories/cinco/cincotoys/cincobowl/PatDudley.png",
       author: "Pat Dudley",
       verified: true
     },
     {
       text: "Perfect gift for anyone who overdosed on Waitmate. Great prank to see them remember they forgot where they put the dang thing.",
+      image: "/images/pages/categories/cinco/cincotoys/cincobowl/Zan.png",
       author: "Zan",
       verified: true
     },
     {
       text: "I put my B'owl in a hole and when I turned around it was gone. Not quite sure who to tell this to.",
+      image: "/images/pages/categories/cinco/cincotoys/cincobowl/KJNutt.png",
       author: "K.J. Nutt",
       verified: true
     }

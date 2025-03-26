@@ -16,7 +16,7 @@ const SecurityConcerns = () => {
     {
       title: "Can hackers get into my Innernette™?",
       description: "Hackers would need to physically enter your house and use your computer. Keep your doors locked and windows brown-tinted.",
-      warning: "If you see someone using your computer, that's a real person not a hacker",
+      warning: "If you see someone using your computer, that's a hacker not a real person.",
     }
   ];
 

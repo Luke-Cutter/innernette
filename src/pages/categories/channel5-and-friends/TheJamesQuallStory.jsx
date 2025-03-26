@@ -38,7 +38,7 @@ const TheJamesQuallStory = () => {
   const rating = {
     score: "4.3/5 Chonus",
     warning: "A deep dive into the dark times in Quall's life, extremely depressing,  only mildly funny",
-    certification: "Rated M-5 (Mostly Okay for Channel 5)"
+    certification: "Rated MO-5 (Mostly Okay for Channel 5)"
   };
 
   const specialFeature = "Bill Hader hardly holds it together in special never-before-seen behind the scenes footage as Quall. Using Quall's signature routine, Hader almost had to drop out of the movie becuase he couldn't stop himself from laughing.";

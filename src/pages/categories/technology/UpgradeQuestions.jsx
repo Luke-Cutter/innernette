@@ -4,9 +4,9 @@ import TechSupportLayout from '../../../components/layout/TechSupportLayout';
 const UpgradeQuestions = () => {
   const helpTopics = [
     {
-      title: "When is Innernette™ 2.0 coming out?",
-      description: "CINCO™ will release version 2.0 when we discover more pages worth adding to the Web Directory Disc™. Current estimate: Eventually™.",
-      warning: "Do not listen to rumors about Innernette™ 2.0 from non-CINCO™ sources",
+      title: "When is Innernette™ 3.0 coming out?",
+      description: "CINCO™ will release version 3.0 when we discover more pages worth adding to the Web Directory Disc™. Current estimate: Eventually™.",
+      warning: "Do not listen to rumors about Innernette™ 3.0 from non-CINCO™ sources",
     },
     {
       title: "Can I add more Web Directory pages?",

@@ -5,12 +5,12 @@ const NetteTunesSupport = () => {
   const helpTopics = [
     {
       title: "Current Song Library",
-      description: "Your base NetteTunes installation includes 'Funk Barn' by the Jeff GoldBluMan Group (4:45 runtime). Song will automatically repeat every 45 seconds due to memory limitations.",
+      description: "Your base Nette Tunes installation includes 'Funk Barn' by the Jeff GoldBluMan Group (4:45 runtime). Song will automatically repeat every 45 seconds due to memory limitations.",
       warning: "Do not attempt to skip, pause, or escape Funk Barn",
     },
     {
       title: "Expanding Your Library",
-      description: "Additional 102 songs available via CINCO™ Music Expansion CD-ROM. Due to unfortunate circumstances involving Terry Cinco's regrettable actions in 2009, we are legally required to sell songs separately.",
+      description: "Additional 102 songs available via CINCO™ Music Expansion CD-ROM. Due to unfortunate circumstances involving Terry Cinco's regrettable actions in 2009, we had to give a free CD-ROM update and are legally required to sell songs separately. CINCO™ is NOT in the business of handouts.",
       warning: "Never mention Lynn Cinco while music is playing",
     },
     {

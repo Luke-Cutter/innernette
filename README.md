@@ -158,7 +158,7 @@ See your favorite sketches come to life in this fictional version of CINCO™'s 
   <tr>
     <td>42. CINCO™ Facts Machine</td>
     <td>43. CINCO™ E-Trial</td>
-    <td>44. CINCO™ Foto Fiddler</td>
+    <td>44. CINCO™ Foto Fiddler (With one secret page!)</td>
   </tr>
   <tr>
     <td>45. CINCO™ Muzik Mayker</td>

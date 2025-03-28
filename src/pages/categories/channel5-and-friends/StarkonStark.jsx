@@ -125,10 +125,10 @@ const StarkonStark = () => {
             </h3>
             <p className="text-sm">Five-time Emmy nominated talk show featuring in-depth conversations with Hollywood's finest.</p>
           </div>
-          <div className="bg-white rounded-lg shadow-lg p-4">
+          <div className="bg-white rounded-lg shadow-lg p-12">
             <h3 className="text-lg font-bold mb-2 flex items-center gap-2">
               <Users size={20} className="text-blue-600" />
-              <GlitchText text="Star Power" />
+              <GlitchText text="Star(k) Power" />
             </h3>
             <p className="text-sm">Featuring exclusive interviews with the biggest names in entertainment, arts, and culture.</p>
           </div>

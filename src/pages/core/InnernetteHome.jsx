@@ -411,7 +411,7 @@ const InnernetteHome = () => {
             <div>
               <h3 className="font-bold mb-2">LIMITED TIME OFFER:</h3>
               <p className="text-sm">
-                Order Minidisc 2 now and receive a free Cinco™ MIDI Organizer!<br />~ Hook up to a T-38 Scsi Compatible port, use the Tulley Toggle, and organize away today!
+                Order Minidisc 2 now and receive a free Cinco™ MIDI Organizer!<br />~ Hook up to a T-38 SCSI Compatible port, use the Tulley Toggle, and organize away today!
               </p>
               <p className="text-xs text-gray-600 italic mt-2">
                 *Allow 10-12 Weeks for Delivery 

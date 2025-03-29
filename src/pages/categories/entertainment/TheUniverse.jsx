@@ -128,7 +128,7 @@ const UniverseExperience = () => {
   ), [telescopeView]);
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-b from-black via-purple-900 to-blue-900 text-white p-8 overflow-hidden">
+    <div className="relative min-h-screen bg-gradient-to-r from-black via-purple-950 to-black text-white p-8 overflow-hidden">
       <StarField />
       
       {showButterflies && (
@@ -151,6 +151,33 @@ const UniverseExperience = () => {
       
       <div className="relative z-10 max-w-6xl mx-auto">
         <h1 className="text-6xl font-bold text-center mb-12 animate-pulse">
+          {/* Tim GIF on left */}
+          <div className="absolute left-0 ml-16 transform -rotate-12">
+            <div className="relative w-32 h-32 overflow-hidden rounded-full border-2 border-yellow-400">
+              <img 
+                src="images/pages/categories/entertainment/TheUniverse/tim.gif" 
+                alt="Tim" 
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute bottom-5 left-0 right-0 bg-black/70 text-center text-xs py-1">
+                Dr. H. Donna Gust
+              </div>
+            </div>
+          </div>
+          
+          {/* Eric GIF on right */}
+          <div className="absolute right-0 mr-16 transform rotate-12">
+            <div className="relative w-32 h-32 overflow-hidden rounded-full border-2 border-yellow-400">
+              <img 
+                src="images/pages/categories/entertainment/TheUniverse/eric.gif" 
+                alt="Eric" 
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute bottom-5 left-0 right-1 bg-black/70 text-center text-xs py-1">
+                Dr. Jimes Tooper
+              </div>
+            </div>
+          </div>
           The Universe
           <span className="block text-2xl mt-2 text-yellow-200">What a concept.</span>
         </h1>

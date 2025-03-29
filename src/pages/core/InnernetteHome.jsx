@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { AlertTriangle, Newspaper, Star, Sparkles, Trophy, Mail, Clock } from 'lucide-react';
+import { AlertTriangle, Newspaper, Star, Cloud, Sparkles, Trophy, Clock } from 'lucide-react';
 import CategoryButton from '../../components/common/CategoryButton';
 
 // Badges and components
@@ -297,29 +297,87 @@ const InnernetteHome = () => {
         </div>
       </div>
 
-      {/* Newsletter Signup */}
-      <div className="bg-purple-100 border-2 border-purple-300 p-4 rounded-lg mb-8" style = {{
-      backgroundImage: `url("data:image/svg+xml,%3Csvg width='84' height='48' viewBox='0 0 84 48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h12v6H0V0zm28 8h12v6H28V8zm14-8h12v6H42V0zm14 0h12v6H56V0zm0 8h12v6H56V8zM42 8h12v6H42V8zm0 16h12v6H42v-6zm14-8h12v6H56v-6zm14 0h12v6H70v-6zm0-16h12v6H70V0zM28 32h12v6H28v-6zM14 16h12v6H14v-6zM0 24h12v6H0v-6zm0 8h12v6H0v-6zm14 0h12v6H14v-6zm14 8h12v6H28v-6zm-14 0h12v6H14v-6zm28 0h12v6H42v-6zm14-8h12v6H56v-6zm0-8h12v6H56v-6zm14 8h12v6H70v-6zm0 8h12v6H70v-6zM14 24h12v6H14v-6zm14-8h12v6H28v-6zM14 8h12v6H14V8zM0 8h12v6H0V8z' fill='%23d791ea' fill-opacity='0.10' fill-rule='evenodd'/%3E%3C/svg%3E")`,
-      backgroundPosition: 'center'
-    }}>
-        <div className="flex items-center gap-4">
-          <Mail className="w-12 h-12 text-purple-600 flex-shrink-0" />
-          <div>
-            <h3 className="font-bold text-lg mb-2">JOIN THE INNERNETTE™ MAILING LIST!</h3>
-            <p className="text-sm mb-2">
-              Get updates about new CINCO™ products via regular mail! We'll send you a physical letter every month!
-            </p>
-            <div className="flex gap-2 mt-2">
-              <input 
-                type="text" 
-                placeholder="Your Mailing Address" 
-                className="p-2 border-2 border-gray-300 rounded flex-grow" 
-              />
-              <button className="bg-purple-500 text-white px-4 py-2 rounded font-bold hover:bg-purple-600">
-                SUBMIT
-              </button>
+          {/* Weather Display - Old School Web 2.0 Style */}
+      <div className="bg-gradient-to-b from-blue-200 to-blue-400 border-4 border-blue-300 p-4 rounded-lg mb-8 shadow-lg" style={{
+        backgroundImage: `
+          linear-gradient(to bottom, #c3d9ff, #a3c2ff),
+          url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3z' fill='%23ffffff' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E")
+        `,
+        boxShadow: "0 0 10px rgba(0,0,0,0.3), inset 0 0 50px rgba(255,255,255,0.5)"
+      }}>
+        {/* Header Bar with Glossy Effect */}
+        <div className="bg-gradient-to-r from-blue-500 via-blue-600 to-blue-500 mb-4 rounded-t-lg p-2 flex items-center justify-between" style={{
+          boxShadow: "inset 0 1px 1px rgba(255,255,255,0.7), 0 2px 3px rgba(0,0,0,0.2)",
+          border: "1px solid #4a80f5"
+        }}>
+          <div className="flex items-center">
+            <Cloud className="w-6 h-6 text-white mr-2" />
+            <h3 className="font-bold text-white text-shadow">INNERNETTE™ WEATHER STATION</h3>
+          </div>
+          <div className="bg-blue-700 text-xs text-white px-2 py-1 rounded animate-pulse">Err402_33C1NC0_DAT3_TIM3*</div>
+        </div>
+        
+        <div className="bg-white p-4 rounded-lg border-2 border-gray-300" style={{
+          backgroundImage: "linear-gradient(to bottom, #ffffff, #f0f0f0)",
+          boxShadow: "inset 0 0 3px rgba(0,0,0,0.2)"
+        }}>
+          {/* Weather Display Box */}
+          <div className="flex gap-4 mb-4">
+            {/* Left Weather Icon */}
+            <div className="w-24 h-24 bg-gradient-to-b from-gray-200 to-gray-300 rounded-full flex items-center justify-center border-4 border-white shadow-lg">
+              <Cloud className="w-16 h-16 text-gray-600" />
+            </div>
+            
+            {/* Right Weather Info */}
+            <div className="flex-1 flex flex-col justify-center">
+              <div className="text-xl font-bold text-blue-800 mb-1" style={{
+                textShadow: "1px 1px 1px rgba(0,0,0,0.1)"
+              }}>CLOUDY</div>
+              <div className="text-sm text-gray-700 font-mono border-t border-b border-gray-300 py-1">
+                Weather Last Updated: <span className="font-bold">NEVER</span>
+              </div>
             </div>
           </div>
+          
+          {/* Weather Details Box */}
+          <div className="bg-gradient-to-b from-blue-50 to-blue-100 p-3 rounded border border-blue-200 mb-3">
+            <table className="w-full border-collapse text-sm">
+              <tbody>
+                <tr>
+                  <td className="font-bold text-blue-800 p-1 border-b border-blue-200">Date:</td>
+                  <td className="p-1 border-b border-blue-200 font-mono">February 11, 2008</td>
+                </tr>
+                <tr>
+                  <td className="font-bold text-blue-800 p-1 border-b border-blue-200">Condition:</td>
+                  <td className="p-1 border-b border-blue-200">Cloudy</td>
+                </tr>
+                <tr>
+                  <td className="font-bold text-blue-800 p-1 border-b border-blue-200">Temperature:</td>
+                  <td className="p-1 border-b border-blue-200 font-mono">72°F</td>
+                </tr>
+                <tr>
+                  <td className="font-bold text-blue-800 p-1">Precipitation:</td>
+                  <td className="p-1 font-mono">30%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          {/* Bottom Disclaimer */}
+          <div className="flex items-center gap-2">
+            <div className="w-6 h-6 flex-shrink-0 bg-yellow-400 rounded-full flex items-center justify-center text-white font-bold text-xs">!</div>
+            <p className="text-xs text-gray-600 italic">
+              *Weather data is pre-loaded and updated with each quarterly CD-ROM release. No internet connection required or possible!
+            </p>
+          </div>
+        </div>
+        
+        {/* Bottom Navigation Bar */}
+        <div className="bg-gradient-to-r from-gray-700 via-gray-800 to-gray-700 mt-2 rounded-b-lg p-1 flex justify-between text-xs text-white" style={{
+          boxShadow: "inset 0 1px 1px rgba(255,255,255,0.2)",
+        }}>
+          <div>[ Today ] [ Last Weeks Forecast ]</div>
+          <div>Powered by CD-ROM Technology™</div>
         </div>
       </div>
 

@@ -4,11 +4,9 @@ import BookAnAppointment from '../../../../components/shared/BookAnAppointment';
 
 const CincoUrinalShower = () => {
   const productImages = [
-    "images/pages/categories/cinco/cincoproducts/CincoUrinalShower/system.PNG",
-    "images/pages/categories/cinco/cincoproducts/CincoUrinalShower/bungee.PNG",
-    "images/pages/categories/cinco/cincoproducts/CincoUrinalShower/installation.PNG",
-    "images/pages/categories/cinco/cincoproducts/CincoUrinalShower/flooding.PNG",
-    "images/pages/categories/cinco/cincoproducts/CincoUrinalShower/janitor.PNG"
+    "images/pages/categories/health/CincoUrinalShower/UrinalShowerLogo.PNG",
+    "images/pages/categories/health/CincoUrinalShower/Set.PNG",
+    "images/pages/categories/health/CincoUrinalShower/StillAngry.PNG"
   ];
 
   const processSteps = [
@@ -16,25 +14,25 @@ const CincoUrinalShower = () => {
       title: "Bungee Installation",
       description: "Secure shower head to urinal using provided industrial bungee cord",
       warning: "Cord tension determines water trajectory",
-      image: "images/pages/categories/cinco/cincoproducts/CincoUrinalShower/setup.PNG"
+      image: "images/pages/categories/health/CincoUrinalShower/BungeeInstallation.PNG"
     },
     {
       title: "Public Disrobing",
       description: "Remove all clothing in public restroom (don't be shy)",
       warning: "Other bathroom users may not understand it's a commercial",
-      image: "images/pages/categories/cinco/cincoproducts/CincoUrinalShower/nude.PNG"
+      image: "images/pages/categories/health/CincoUrinalShower/RemoveClothing.PNG"
     },
     {
       title: "Synchocuronal Activation",
-      description: "Initiate horizontal water flow with dual body wash dispensing",
+      description: "Flush to initiate horizontal water flow with dual body wash dispensing",
       warning: "Water redirection is permanent",
-      image: "images/pages/categories/cinco/cincoproducts/CincoUrinalShower/flow.PNG"
+      image: "images/pages/categories/health/CincoUrinalShower/Flush.PNG"
     },
     {
       title: "Janitor Confrontation",
       description: "Explain that you're a Hollywood actor and this is just a commercial",
       warning: "Explanation success rate varies",
-      image: "images/pages/categories/cinco/cincoproducts/CincoUrinalShower/explain.PNG"
+      image: "images/pages/categories/health/CincoUrinalShower/JanitorConfrontation.PNG"
     }
   ];
 
@@ -53,16 +51,6 @@ const CincoUrinalShower = () => {
       title: "Horizontal Technology",
       description: "Revolutionary sideways water delivery system",
       icon: "↔️"
-    },
-    {
-      title: "Bungee Engineering",
-      description: "Military-grade cord ensures optimal shower head placement",
-      icon: "🪢"
-    },
-    {
-      title: "Flood Generation",
-      description: "Comprehensive floor cleaning included with every shower",
-      icon: "🌊"
     }
   ];
 
@@ -70,19 +58,13 @@ const CincoUrinalShower = () => {
     {
       text: "I'm not clean, okay? I don't clean!",
       author: "Angry Janitor",
-      image: "images/pages/categories/cinco/cincoproducts/CincoUrinalShower/janitor.PNG",
+      image: "images/pages/categories/health/CincoUrinalShower/AngryJanitor.PNG",
       verified: true
     },
     {
       text: "This is just a commercial! These are the cameras, see?",
       author: "Hollywood Actor",
-      image: "images/pages/categories/cinco/cincoproducts/CincoUrinalShower/actor.PNG",
-      verified: true
-    },
-    {
-      text: "Who you think clean all this mess up?",
-      author: "Still Angry Janitor",
-      image: "images/pages/categories/cinco/cincoproducts/CincoUrinalShower/janitor2.PNG",
+      image: "images/pages/categories/health/CincoUrinalShower/HollywoodActor.PNG",
       verified: true
     }
   ];

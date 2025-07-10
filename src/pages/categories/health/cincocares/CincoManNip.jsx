@@ -4,11 +4,11 @@ import BookAnAppointment from '../../../../components/shared/BookAnAppointment';
 
 const CincoManNip = () => {
   const productImages = [
-    "images/pages/categories/cinco/cincoproducts/CincoManNip/duffy.PNG",
-    "images/pages/categories/cinco/cincoproducts/CincoManNip/nip.PNG",
-    "images/pages/categories/cinco/cincoproducts/CincoManNip/application.PNG",
-    "images/pages/categories/cinco/cincoproducts/CincoManNip/effects.PNG",
-    "images/pages/categories/cinco/cincoproducts/CincoManNip/chess.PNG"
+    "images/pages/categories/health/ManNip/DuffyNip.PNG",
+    "images/pages/categories/health/ManNip/spices.PNG",
+    "images/pages/categories/health/ManNip/application.PNG",
+    "images/pages/categories/health/ManNip/effects.PNG",
+    "images/pages/categories/health/ManNip/chess.PNG"
   ];
 
   const processSteps = [
@@ -16,25 +16,19 @@ const CincoManNip = () => {
       title: "Nip Selection",
       description: "Choose from our variety of man spices including Old Leather, Forgotten Dreams, and Chess Master",
       warning: "Spice combinations may trigger spontaneous Duffy chanting",
-      image: "images/pages/categories/cinco/cincoproducts/CincoManNip/selection.PNG"
+      image: "images/pages/categories/health/ManNip/selection.PNG"
     },
     {
       title: "Nasal Application",
       description: "Simply insert Man Nip directly into nostrils until disappearance occurs",
       warning: "Complete disappearance is normal and encouraged",
-      image: "images/pages/categories/cinco/cincoproducts/CincoManNip/insertion.PNG"
+      image: "images/pages/categories/health/ManNip/insertion.PNG"
     },
     {
       title: "Sensory Awakening",
       description: "Allow the nip to take hold of your senses as little doors begin opening",
       warning: "Doors may lead to unexpected memories",
-      image: "images/pages/categories/cinco/cincoproducts/CincoManNip/awakening.PNG"
-    },
-    {
-      title: "Purring Phase",
-      description: "Enter a state of complete contentment, just like our feline friends",
-      warning: "Purring may become permanent form of communication",
-      image: "images/pages/categories/cinco/cincoproducts/CincoManNip/purring.PNG"
+      image: "images/pages/categories/health/ManNip/awakening.PNG"
     }
   ];
 
@@ -50,16 +44,6 @@ const CincoManNip = () => {
       icon: "👃"
     },
     {
-      title: "Memory Doors",
-      description: "Access forgotten experiences through our patented door-opening technology",
-      icon: "🚪"
-    },
-    {
-      title: "Chess Enhancement",
-      description: "Improved strategic thinking through complete sensory dissolution",
-      icon: "♟️"
-    },
-    {
       title: "Duffy Guarantee",
       description: "Personally endorsed by a lonely Patrick Duffy",
       icon: "✨"
@@ -70,19 +54,13 @@ const CincoManNip = () => {
     {
       text: "Duffy! Duffy! Duffy! Duffy! Duffy! Duffy!",
       author: "Keith",
-      image: "images/pages/categories/cinco/cincoproducts/CincoManNip/keith.PNG",
+      image: "images/pages/categories/health/ManNip/keith.PNG",
       verified: true
     },
     {
       text: "I'm old and I'm tired, but my nip's the best!",
       author: "Patrick Duffy",
-      image: "images/pages/categories/cinco/cincoproducts/CincoManNip/patrick.PNG",
-      verified: true
-    },
-    {
-      text: "*Purring noises* Check and mate!",
-      author: "Chess Enthusiast",
-      image: "images/pages/categories/cinco/cincoproducts/CincoManNip/chess.PNG",
+      image: "images/pages/categories/health/ManNip/duffy.PNG",
       verified: true
     }
   ];
@@ -96,7 +74,7 @@ const CincoManNip = () => {
     "May cause excessive purring in formal situations",
     "Some users never return from memory doors",
     "Spouses may not recognize improved personality",
-    "Patrick Duffy is not responsible for chess losses"
+    "Patrick Duffy is responsible for chess losses"
   ];
 
   return (

@@ -4,11 +4,11 @@ import BookAnAppointment from '../../../../components/shared/BookAnAppointment';
 
 const CincoEZKreme = () => {
   const productImages = [
-    "images/pages/categories/cinco/cincoproducts/CincoEZKreme/kreme.PNG",
-    "images/pages/categories/cinco/cincoproducts/CincoEZKreme/application.PNG",
-    "images/pages/categories/cinco/cincoproducts/CincoEZKreme/meeting.PNG",
-    "images/pages/categories/cinco/cincoproducts/CincoEZKreme/excuse.PNG",
-    "images/pages/categories/cinco/cincoproducts/CincoEZKreme/dpants.PNG"
+    "images/pages/categories/health/EZKreme/KremeLogo.PNG",
+    "images/pages/categories/health/EZKreme/CincoLife.PNG",
+    "images/pages/categories/health/EZKreme/meeting.PNG",
+    "images/pages/categories/health/EZKreme/excuse.PNG",
+    "images/pages/categories/health/EZKreme/dpants.PNG"
   ];
 
   const processSteps = [
@@ -16,25 +16,25 @@ const CincoEZKreme = () => {
       title: "D-Pants Preparation",
       description: "Put on your CINCO™ D-Pants before applying E-Z Kreme. This step cannot be skipped",
       warning: "Regular pants will not survive the E-Z Kreme experience",
-      image: "images/pages/categories/cinco/cincoproducts/CincoEZKreme/preparation.PNG"
+      image: "images/pages/categories/health/DPants/Ankle.PNG"
     },
     {
       title: "Kreme Application",
       description: "Apply mint-flavored gel liberally to hands, face, and optionally feet",
       warning: "Avoid eye contact with gel or resulting foam",
-      image: "images/pages/categories/cinco/cincoproducts/CincoEZKreme/applying.PNG"
+      image: "images/pages/categories/health/EZKreme/rub.PNG"
     },
     {
       title: "Liquidization Process",
       description: "Wait for patented liquidizers to convert solid matter into foamy brown excitement",
       warning: "Process cannot be reversed once initiated",
-      image: "images/pages/categories/cinco/cincoproducts/CincoEZKreme/process.PNG"
+      image: "images/pages/categories/health/EZKreme/liquidization.PNG"
     },
     {
       title: "Meeting Avoidance",
       description: "Simply announce your condition and exit any unwanted situation",
       warning: "Excuse effectiveness may decrease with repeated use",
-      image: "images/pages/categories/cinco/cincoproducts/CincoEZKreme/avoiding.PNG"
+      image: "images/pages/categories/health/EZKreme/diarrhea.PNG"
     }
   ];
 
@@ -53,36 +53,20 @@ const CincoEZKreme = () => {
       title: "Rapid Action",
       description: "Guaranteed results within seconds of application",
       icon: "⚡"
-    },
-    {
-      title: "Multiple Application Points",
-      description: "Versatile gel works on hands, face, and feet for maximum absorption",
-      icon: "👐"
-    },
-    {
-      title: "Meeting Compatibility",
-      description: "Perfect excuse recognized by 9 out of 10 managers",
-      icon: "💼"
     }
   ];
 
   const customerReviews = [
     {
       text: "Haven't attended a meeting in weeks! My career is soaring!",
-      author: "Dr. Steve Brule",
-      image: "images/pages/categories/cinco/cincoproducts/CincoEZKreme/brule.PNG",
+      author: "Business Hunk",
+      image: "images/pages/categories/health/EZKreme/boss.PNG",
       verified: true
     },
     {
       text: "The mint flavor really adds a touch of class to my excuses",
       author: "Business Paul",
-      image: "images/pages/categories/cinco/cincoproducts/CincoEZKreme/paul.PNG",
-      verified: true
-    },
-    {
-      text: "For your health: Always carry spare D-Pants!",
-      author: "Dr. Steve Brule",
-      image: "images/pages/categories/cinco/cincoproducts/CincoEZKreme/brule2.PNG",
+      image: "images/pages/categories/health/EZKreme/paul.PNG",
       verified: true
     }
   ];

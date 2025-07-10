@@ -4,11 +4,11 @@ import BookAnAppointment from '../../../../components/shared/BookAnAppointment';
 
 const CincoDreamCream = () => {
   const productImages = [
-    "images/pages/categories/cinco/cincoproducts/CincoDreamCream/cream.PNG",
-    "images/pages/categories/cinco/cincoproducts/CincoDreamCream/application.PNG",
-    "images/pages/categories/cinco/cincoproducts/CincoDreamCream/dream.PNG",
-    "images/pages/categories/cinco/cincoproducts/CincoDreamCream/nightmare.PNG",
-    "images/pages/categories/cinco/cincoproducts/CincoDreamCream/hoagie.PNG"
+    "images/pages/categories/health/DreamCream/DreamCreamLogo.PNG",
+    "images/pages/categories/health/DreamCream/kid.PNG",
+    "images/pages/categories/health/DreamCream/pierre.PNG",
+    "images/pages/categories/health/DreamCream/thenette.PNG",
+    "images/pages/categories/health/DreamCream/nightmare.PNG"
   ];
 
   const processSteps = [
@@ -16,25 +16,25 @@ const CincoDreamCream = () => {
       title: "Cold Application",
       description: "Apply freezing Dream Cream generously to exposed skin before sleep",
       warning: "Temperature indicates dream penetration level",
-      image: "images/pages/categories/cinco/cincoproducts/CincoDreamCream/cold.PNG"
+      image: "images/pages/categories/health/DreamCream/cold.PNG"
     },
     {
       title: "Lip Coverage",
       description: "Optional lip application for enhanced dream flavor (possibly poisonous)",
       warning: "Toxicity levels untested",
-      image: "images/pages/categories/cinco/cincoproducts/CincoDreamCream/lips.PNG"
+      image: "images/pages/categories/health/DreamCream/lips.PNG"
     },
     {
       title: "Dream Entry",
       description: "Enter a world of BBQ dads, fast internet, and mustache appreciation",
       warning: "Dreams may not reflect actual internet speeds",
-      image: "images/pages/categories/cinco/cincoproducts/CincoDreamCream/entry.PNG"
+      image: "images/pages/categories/health/DreamCream/entry.PNG"
     },
     {
       title: "Nightmare Transition",
       description: "Experience inevitable descent into dial-up internet and vanishing mustaches",
       warning: "Hoagie Man cannot help you",
-      image: "images/pages/categories/cinco/cincoproducts/CincoDreamCream/transition.PNG"
+      image: "images/pages/categories/health/DreamCream/transition.PNG"
     }
   ];
 
@@ -45,22 +45,12 @@ const CincoDreamCream = () => {
       icon: "❄️"
     },
     {
-      title: "BBQ Enhancement",
+      title: "BBQ Meats Enhancement",
       description: "Guaranteed appearance of grilling-based father figures",
       icon: "🍖"
     },
     {
-      title: "Internet Simulation",
-      description: "Experience download speeds from broadband to dial-up as dream progresses",
-      icon: "💻"
-    },
-    {
-      title: "Mustache Generation",
-      description: "Spontaneous thick mustache manifestation (temporary)",
-      icon: "👨"
-    },
-    {
-      title: "Magnus Detection",
+      title: "Hoagie Man Spoiled Meat Detection",
       description: "Advanced warning system for rotten meat contamination",
       icon: "🥩"
     }
@@ -70,19 +60,13 @@ const CincoDreamCream = () => {
     {
       text: "The download speeds were amazing until they weren't...",
       author: "Dr. Steve Brule",
-      image: "images/pages/categories/cinco/cincoproducts/CincoDreamCream/brule.PNG",
-      verified: true
-    },
-    {
-      text: "Has anyone seen my mustache? It was here a minute ago.",
-      author: "BBQ Dad",
-      image: "images/pages/categories/cinco/cincoproducts/CincoDreamCream/dad.PNG",
+      image: "images/pages/categories/health/DreamCream/brule.jpg",
       verified: true
     },
     {
       text: "HOAGIE MAN CAN'T HELP YOU NOW",
       author: "Unknown Entity",
-      image: "images/pages/categories/cinco/cincoproducts/CincoDreamCream/entity.PNG",
+      image: "images/pages/categories/health/DreamCream/transition.PNG",
       verified: true
     }
   ];
@@ -92,11 +76,10 @@ const CincoDreamCream = () => {
     "Dream internet speeds may vary",
     "Mustaches may disappear without warning",
     "BBQ meat quality not verified",
-    "Magnus contamination possible",
     "Dial-up sounds may persist after waking",
     "Cream probably poisonous",
     "Dad appearances non-refundable",
-    "Dream websites not vetted for content"
+    "Dream websites not vetted for content or Innernette™ approved"
   ];
 
   return (
@@ -115,7 +98,7 @@ const CincoDreamCream = () => {
         offerText="Order now and receive a complimentary BBQ set! (Meat quality not guaranteed)"
         offerDisclaimer="CINCO™ not responsible for vanishing mustaches or corrupted downloads"
         buttonText="Enter The Dream Realm"
-        certificationBody="Department of Nocturnal BBQ Affairs"
+        certificationBody="Department of Nocturnal BBQ Affairs & CINCO™ Sedatives"
       />
     </CincoProductLayout>
   );

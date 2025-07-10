@@ -4,11 +4,11 @@ import BookAnAppointment from '../../../../components/shared/BookAnAppointment';
 
 const CincoFaceTimePartySnoozer = () => {
   const productImages = [
-    "images/pages/categories/cinco/cincoproducts/CincoFaceTimePartySnoozer/device.PNG",
-    "images/pages/categories/cinco/cincoproducts/CincoFaceTimePartySnoozer/brace.PNG",
-    "images/pages/categories/cinco/cincoproducts/CincoFaceTimePartySnoozer/earphones.PNG",
-    "images/pages/categories/cinco/cincoproducts/CincoFaceTimePartySnoozer/sleeping.PNG",
-    "images/pages/categories/cinco/cincoproducts/CincoFaceTimePartySnoozer/rebate.PNG"
+    "images/pages/categories/health/PartySnoozer/snoozerproduct.PNG",
+    "images/pages/categories/health/PartySnoozer/sleepthrough.PNG",
+    "images/pages/categories/health/PartySnoozer/notinterested.PNG",
+    "images/pages/categories/health/PartySnoozer/rest.PNG",
+    "images/pages/categories/health/PartySnoozer/RommOahDenmirk.PNG"
   ];
 
   const processSteps = [
@@ -16,25 +16,25 @@ const CincoFaceTimePartySnoozer = () => {
       title: "Body Brace Fitting",
       description: "Secure upright sleeping position with professional-grade body brace",
       warning: "Brace may become permanent",
-      image: "images/pages/categories/cinco/cincoproducts/CincoFaceTimePartySnoozer/fitting.PNG"
+      image: "images/pages/categories/health/PartySnoozer/bodybrace.PNG"
     },
     {
       title: "Audio Response Setup",
       description: "Program five distinct professional responses: 'Sure, why not?', 'I understand', 'Okay', 'Sounds good', and 'Rebate signing up'",
       warning: "Responses cannot be customized",
-      image: "images/pages/categories/cinco/cincoproducts/CincoFaceTimePartySnoozer/audio.PNG"
+      image: "images/pages/categories/health/PartySnoozer/fivelines.PNG"
     },
     {
       title: "Soothing Music Activation",
       description: "Initialize earphone system to block all external conversation",
       warning: "May cause permanent social disconnection",
-      image: "images/pages/categories/cinco/cincoproducts/CincoFaceTimePartySnoozer/music.PNG"
+      image: "images/pages/categories/health/PartySnoozer/fairlytiny.PNG"
     },
     {
       title: "Social Integration",
       description: "Enter any social gathering and immediately begin sleeping",
       warning: "Fish story responses not guaranteed",
-      image: "images/pages/categories/cinco/cincoproducts/CincoFaceTimePartySnoozer/social.PNG"
+      image: "images/pages/categories/health/PartySnoozer/inuse.PNG"
     }
   ];
 
@@ -53,36 +53,20 @@ const CincoFaceTimePartySnoozer = () => {
       title: "Conversation Blocking",
       description: "Premium earphones eliminate unwanted social input",
       icon: "🎧"
-    },
-    {
-      title: "Rebate Detection",
-      description: "Automatically responds to any mention of financial opportunities",
-      icon: "💰"
-    },
-    {
-      title: "Fish Story Mode",
-      description: "Special response set for extended angling narratives",
-      icon: "🐟"
     }
   ];
 
   const customerReviews = [
     {
       text: "I understand. Sure, why not? I understand.",
-      author: "Engagement Party Guest",
-      image: "images/pages/categories/cinco/cincoproducts/CincoFaceTimePartySnoozer/guest.PNG",
+      author: "Snoozer",
+      image: "images/pages/categories/health/PartySnoozer/snoozer.PNG",
       verified: true
     },
     {
-      text: "Something about a river... Okay... I understand",
-      author: "Fish Story Listener",
-      image: "images/pages/categories/cinco/cincoproducts/CincoFaceTimePartySnoozer/listener.PNG",
-      verified: true
-    },
-    {
-      text: "4.36 rebate now? Rebate signing up!",
-      author: "Small Business Owner",
-      image: "images/pages/categories/cinco/cincoproducts/CincoFaceTimePartySnoozer/owner.PNG",
+      text: "Please buy my product, I put my voice on the line",
+      author: "Romm Oah Denmirk",
+      image: "images/pages/categories/health/PartySnoozer/Romm.PNG",
       verified: true
     }
   ];

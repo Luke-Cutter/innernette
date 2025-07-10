@@ -4,11 +4,11 @@ import BookAnAppointment from '../../../../components/shared/BookAnAppointment';
 
 const CincoSleepChair = () => {
   const productImages = [
-    "images/pages/categories/cinco/cincoproducts/CincoSleepChair/chair.PNG",
-    "images/pages/categories/cinco/cincoproducts/CincoSleepChair/lens.PNG",
-    "images/pages/categories/cinco/cincoproducts/CincoSleepChair/electrodes.PNG",
-    "images/pages/categories/cinco/cincoproducts/CincoSleepChair/toilet.PNG",
-    "images/pages/categories/cinco/cincoproducts/CincoSleepChair/watching.PNG"
+    "images/pages/categories/health/CincoSleepChair/SWCLogo.PNG",
+    "images/pages/categories/health/CincoSleepChair/sleepwatching.PNG",
+    "images/pages/categories/health/CincoSleepChair/DreamersBook.PNG",
+    "images/pages/categories/health/CincoSleepChair/ToiletHole.PNG",
+    "images/pages/categories/health/CincoSleepChair/CincoHelpsYouWatch.PNG"
   ];
 
   const processSteps = [
@@ -16,25 +16,25 @@ const CincoSleepChair = () => {
       title: "Watcher Setup",
       description: "Position chair at optimal friend-watching distance (3-5 feet recommended)",
       warning: "Maintain eye contact even when friend is unconscious",
-      image: "images/pages/categories/cinco/cincoproducts/CincoSleepChair/setup.PNG"
+      image: "images/pages/categories/health/CincoSleepChair/CincOM.PNG"
     },
     {
       title: "Zoom Enhancement",
       description: "Adjust sleep watcher zoom lens for maximum dream detail observation",
       warning: "Some dreams may be too private for zoom levels",
-      image: "images/pages/categories/cinco/cincoproducts/CincoSleepChair/zoom.PNG"
+      image: "images/pages/categories/health/CincoSleepChair/2xzoom.PNG"
     },
     {
       title: "Dream Documentation",
       description: "Record detailed hypotheses about friend's dreams in provided Dreamer's Book",
       warning: "Dream interpretations may not reflect actual friend thoughts",
-      image: "images/pages/categories/cinco/cincoproducts/CincoSleepChair/documentation.PNG"
+      image: "images/pages/categories/health/CincoSleepChair/Bear.PNG"
     },
     {
       title: "Bear Prevention",
       description: "Activate nightmare prevention tone at first sign of bear-related dreams",
       warning: "Other animal nightmares not covered",
-      image: "images/pages/categories/cinco/cincoproducts/CincoSleepChair/prevention.PNG"
+      image: "images/pages/categories/health/CincoSleepChair/FliptheSwitch.PNG"
     }
   ];
 
@@ -53,16 +53,6 @@ const CincoSleepChair = () => {
       title: "Electroshock System",
       description: "Self-administered consciousness maintenance system",
       icon: "⚡"
-    },
-    {
-      title: "Integrated Toilet Hole",
-      description: "Never miss a moment of friend sleep with convenient waste management",
-      icon: "🚽"
-    },
-    {
-      title: "Bear Protection",
-      description: "Specialized tone system prevents ursine dream encounters",
-      icon: "🐻"
     }
   ];
 
@@ -70,19 +60,13 @@ const CincoSleepChair = () => {
     {
       text: "Thanks for the great show last night buddy!",
       author: "Professional Watcher",
-      image: "images/pages/categories/cinco/cincoproducts/CincoSleepChair/watcher.PNG",
+      image: "images/pages/categories/health/CincoSleepChair/Watcher.PNG",
       verified: true
     },
     {
       text: "The bear's gonna take a bite out of me! ...oh, thanks for the wake-up",
       author: "Protected Sleeper",
-      image: "images/pages/categories/cinco/cincoproducts/CincoSleepChair/sleeper.PNG",
-      verified: true
-    },
-    {
-      text: "Electroshock keeps me alert for all 8 hours!",
-      author: "Dedicated Observer",
-      image: "images/pages/categories/cinco/cincoproducts/CincoSleepChair/observer.PNG",
+      image: "images/pages/categories/health/CincoSleepChair/prish.jpg",
       verified: true
     }
   ];
@@ -96,7 +80,7 @@ const CincoSleepChair = () => {
     "Zoom lens may reveal more than intended",
     "Some friendships may not survive observation",
     "Hot friends may be distracting",
-    "Troubles City residents not eligible"
+    "Brown Town residents not eligible"
   ];
 
   return (

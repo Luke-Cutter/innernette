@@ -4,11 +4,11 @@ import BookAnAppointment from '../../../../components/shared/BookAnAppointment';
 
 const CincoDPants = () => {
   const productImages = [
-    "images/pages/categories/cinco/cincoproducts/CincoDPants/pants.PNG",
-    "images/pages/categories/cinco/cincoproducts/CincoDPants/elastic.PNG",
-    "images/pages/categories/cinco/cincoproducts/CincoDPants/filling.PNG",
-    "images/pages/categories/cinco/cincoproducts/CincoDPants/hosing.PNG",
-    "images/pages/categories/cinco/cincoproducts/CincoDPants/backyard.PNG"
+    "images/pages/categories/health/DPants/DPantsLogo.PNG",
+    "images/pages/categories/health/DPants/NoLoafs.PNG",
+    "images/pages/categories/health/DPants/Squirt.PNG",
+    "images/pages/categories/health/DPants/uncontrollablediarrhea.PNG",
+    "images/pages/categories/health/DPants/backyard.PNG"
   ];
 
   const processSteps = [
@@ -16,25 +16,25 @@ const CincoDPants = () => {
       title: "Layering Process",
       description: "Wear D-Pants under regular trousers for complete discretion",
       warning: "Regular trousers still required by law",
-      image: "images/pages/categories/cinco/cincoproducts/CincoDPants/layering.PNG"
+      image: "images/pages/categories/health/DPants/layering.PNG"
     },
     {
       title: "Ankle Seal Check",
       description: "Ensure elastic bands are properly secured for minimal leakage",
       warning: "Almost never runs down ankles",
-      image: "images/pages/categories/cinco/cincoproducts/CincoDPants/sealing.PNG"
+      image: "images/pages/categories/health/DPants/Ankle.PNG"
     },
     {
       title: "Liquid Management",
       description: "Allow uncontrollable liquids to collect in protective plastic lining",
       warning: "LIQUIDS ONLY - Solid loaves will breach containment",
-      image: "images/pages/categories/cinco/cincoproducts/CincoDPants/collecting.PNG"
+      image: "images/pages/categories/health/DPants/Bust.PNG"
     },
     {
       title: "Maintenance",
       description: "Simply hose off in backyard when filled to maximum capacity",
       warning: "Check local ordinances regarding backyard hosing",
-      image: "images/pages/categories/cinco/cincoproducts/CincoDPants/cleaning.PNG"
+      image: "images/pages/categories/health/DPants/HoseOff.PNG"
     }
   ];
 
@@ -53,16 +53,6 @@ const CincoDPants = () => {
       title: "Plastic Construction",
       description: "Premium liquid-holding capability (not rated for solids)",
       icon: "🏺"
-    },
-    {
-      title: "Easy Cleaning",
-      description: "Garden hose compatible for quick refreshing",
-      icon: "🦠"
-    },
-    {
-      title: "Maximum Mobility",
-      description: "Squirt on the go without breaking stride",
-      icon: "🏃"
     }
   ];
 
@@ -70,19 +60,13 @@ const CincoDPants = () => {
     {
       text: "I've been filling them right in front of you!",
       author: "Diah Rhea-Jones",
-      image: "images/pages/categories/cinco/cincoproducts/CincoDPants/diah.PNG",
+      image: "images/pages/categories/health/DPants/layering.PNG",
       verified: true
     },
     {
       text: "My backyard has never been more... active",
-      author: "Jenny",
-      image: "images/pages/categories/cinco/cincoproducts/CincoDPants/jenny.PNG",
-      verified: true
-    },
-    {
-      text: "Should have read the solid loaf warning...",
-      author: "Regretful User",
-      image: "images/pages/categories/cinco/cincoproducts/CincoDPants/regret.PNG",
+      author: "Patrick Duffy",
+      image: "images/pages/categories/health/DPants/Duffy.PNG",
       verified: true
     }
   ];

@@ -4,11 +4,11 @@ import BookAnAppointment from '../../../../components/shared/BookAnAppointment';
 
 const CincoPoopTube = () => {
   const productImages = [
-    "images/pages/categories/cinco/cincoproducts/CincoPoopTube/tube.PNG",
-    "images/pages/categories/cinco/cincoproducts/CincoPoopTube/standing.PNG",
-    "images/pages/categories/cinco/cincoproducts/CincoPoopTube/picnic.PNG",
-    "images/pages/categories/cinco/cincoproducts/CincoPoopTube/kids.PNG",
-    "images/pages/categories/cinco/cincoproducts/CincoPoopTube/improved.PNG"
+    "images/pages/categories/health/PoopTube/ModifiedCommercial.PNG",
+    "images/pages/categories/health/PoopTube/PoopTubeLogo.PNG",
+    "images/pages/categories/health/PoopTube/4Kids.PNG",
+    "images/pages/categories/health/PoopTube/BMFahrtz.PNG",
+    "images/pages/categories/health/PoopTube/WhetteFahrtz.PNG"
   ];
 
   const processSteps = [
@@ -16,25 +16,25 @@ const CincoPoopTube = () => {
       title: "Manly Standing",
       description: "Assume dominant upright position for maximum dignity",
       warning: "Maintain power stance throughout process",
-      image: "images/pages/categories/cinco/cincoproducts/CincoPoopTube/position.PNG"
+      image: "images/pages/categories/health/PoopTube/ManlyStanding.PNG"
     },
     {
       title: "Tube Alignment",
       description: "Connect tube to nearest approved trash receptacle",
       warning: "Public trash cans must be clearly marked",
-      image: "images/pages/categories/cinco/cincoproducts/CincoPoopTube/alignment.PNG"
+      image: "images/pages/categories/health/PoopTube/FecalPump.PNG"
     },
     {
       title: "Scent Management",
       description: "Experience our new improved smell (still bad, but better)",
       warning: "Definition of 'better' may vary",
-      image: "images/pages/categories/cinco/cincoproducts/CincoPoopTube/management.PNG"
+      image: "images/pages/categories/health/PoopTube/Child.PNG"
     },
     {
       title: "Family Integration",
-      description: "Perfect for picnics, gatherings, and other inappropriate occasions",
+      description: "The liquifier makes this perfect for picnics, gatherings, and other inappropriate occasions",
       warning: "Some family members may not understand",
-      image: "images/pages/categories/cinco/cincoproducts/CincoPoopTube/integration.PNG"
+      image: "images/pages/categories/health/PoopTube/Liquifier.PNG"
     }
   ];
 
@@ -43,16 +43,6 @@ const CincoPoopTube = () => {
       title: "Stand-Up Technology",
       description: "Revolutionary vertical waste management system",
       icon: "🧍"
-    },
-    {
-      title: "Line Avoidance",
-      description: "Never wait for traditional facilities again",
-      icon: "🚫"
-    },
-    {
-      title: "Kid-Friendly Design",
-      description: "Sized for the whole family (Bradley's dad approved)",
-      icon: "👶"
     },
     {
       title: "Improved Aroma",
@@ -70,19 +60,13 @@ const CincoPoopTube = () => {
     {
       text: "My dad said I could sell it!",
       author: "Bradley Michael Fartz",
-      image: "images/pages/categories/cinco/cincoproducts/CincoPoopTube/bradley.PNG",
+      image: "images/pages/categories/health/PoopTube/BM.PNG",
       verified: true
     },
     {
-      text: "Finally, I can poop like a man!",
-      author: "Standing Customer",
-      image: "images/pages/categories/cinco/cincoproducts/CincoPoopTube/customer.PNG",
-      verified: true
-    },
-    {
-      text: "The smell is... better?",
-      author: "Scent Connoisseur",
-      image: "images/pages/categories/cinco/cincoproducts/CincoPoopTube/nose.PNG",
+      text: "Finally, a tube for me!",
+      author: "Real Child User",
+      image: "images/pages/categories/health/PoopTube/Child.PNG",
       verified: true
     }
   ];
@@ -95,7 +79,6 @@ const CincoPoopTube = () => {
     "Family tradition requirements may vary",
     "Public reaction unpredictable",
     "Smell improvement subjective",
-    "Bradley's dad's permission required",
     "May affect future party invitations"
   ];
 

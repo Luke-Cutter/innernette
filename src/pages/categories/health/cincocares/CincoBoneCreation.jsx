@@ -4,11 +4,11 @@ import BookAnAppointment from '../../../../components/shared/BookAnAppointment';
 
 const CincoBoneCreation = () => {
   const productImages = [
-    "images/pages/categories/cinco/cincoproducts/CincoReidTamaranda/bones.PNG",
-    "images/pages/categories/cinco/cincoproducts/CincoReidTamaranda/powder.PNG",
-    "images/pages/categories/cinco/cincoproducts/CincoReidTamaranda/mold.PNG",
-    "images/pages/categories/cinco/cincoproducts/CincoReidTamaranda/oven.PNG",
-    "images/pages/categories/cinco/cincoproducts/CincoReidTamaranda/squirrel.PNG"
+    "images/pages/categories/health/BoneCreation/DrTamaranda.PNG",
+    "images/pages/categories/health/BoneCreation/NoBones.PNG",
+    "images/pages/categories/health/BoneCreation/Human.PNG",
+    "images/pages/categories/health/BoneCreation/Chicken.PNG",
+    "images/pages/categories/health/BoneCreation/NoSquirrel.PNG"
   ];
 
   const processSteps = [
@@ -16,25 +16,25 @@ const CincoBoneCreation = () => {
       title: "Bone Collection",
       description: "Gather discarded chicken and pig rib bones from local waste",
       warning: "ABSOLUTELY NO SQUIRREL BONES",
-      image: "images/pages/categories/cinco/cincoproducts/CincoReidTamaranda/collection.PNG"
+      image: "images/pages/categories/health/BoneCreation/collection.PNG"
     },
     {
       title: "Powder Creation",
       description: "Crush bones into fine white powder using institute-approved methods",
       warning: "Powder must achieve specific whiteness",
-      image: "images/pages/categories/cinco/cincoproducts/CincoReidTamaranda/crushing.PNG"
+      image: "images/pages/categories/health/BoneCreation/crushing.PNG"
     },
     {
       title: "Liquid Integration",
       description: "Add water or fruit juice of choice, let mixture settle for several days",
       warning: "Mixture may develop consciousness",
-      image: "images/pages/categories/cinco/cincoproducts/CincoReidTamaranda/mixing.PNG"
+      image: "images/pages/categories/health/BoneCreation/mixing.PNG"
     },
     {
       title: "Pizza Oven Baking",
       description: "Pour into plaster mold and bake in standard pizza oven",
       warning: "Pizza taste may be affected permanently",
-      image: "images/pages/categories/cinco/cincoproducts/CincoReidTamaranda/baking.PNG"
+      image: "images/pages/categories/health/BoneCreation/baking.PNG"
     }
   ];
 
@@ -45,19 +45,9 @@ const CincoBoneCreation = () => {
       icon: "🦴"
     },
     {
-      title: "Fruit Juice Option",
-      description: "Add flavor variety to your bone creation process",
-      icon: "🧃"
-    },
-    {
       title: "Pizza Oven Integration",
       description: "Uses existing restaurant equipment for cost efficiency",
       icon: "🍕"
-    },
-    {
-      title: "Plaster Mold System",
-      description: "Create any bone shape needed (for demonstration only)",
-      icon: "🦿"
     },
     {
       title: "Squirrel Detection",
@@ -68,21 +58,15 @@ const CincoBoneCreation = () => {
 
   const customerReviews = [
     {
-      text: "I used to throw away my animal bones, but now...",
-      author: "Bone Recycler",
-      image: "images/pages/categories/cinco/cincoproducts/CincoReidTamaranda/recycler.PNG",
-      verified: true
-    },
-    {
-      text: "The grape juice really adds something special to my femurs",
-      author: "Juice Enthusiast",
-      image: "images/pages/categories/cinco/cincoproducts/CincoReidTamaranda/juice.PNG",
+      text: "Children, give me your bones!",
+      author: "Richard Dunn",
+      image: "images/pages/categories/health/BoneCreation/Dunn.PNG",
       verified: true
     },
     {
       text: "I am DEADLY serious about the squirrel bones",
       author: "Dr. Reid Tamaranda",
-      image: "images/pages/categories/cinco/cincoproducts/CincoReidTamaranda/reid.PNG",
+      image: "images/pages/categories/health/BoneCreation/reid.PNG",
       verified: true
     }
   ];

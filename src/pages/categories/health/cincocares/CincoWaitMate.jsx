@@ -4,11 +4,11 @@ import BookAnAppointment from '../../../../components/shared/BookAnAppointment';
 
 const CincoWaitMate = () => {
   const productImages = [
-    "images/pages/categories/cinco/cincoproducts/CincoWaitMate/pills.PNG",
-    "images/pages/categories/cinco/cincoproducts/CincoWaitMate/goldblum.PNG",
-    "images/pages/categories/cinco/cincoproducts/CincoWaitMate/sleep.PNG",
-    "images/pages/categories/cinco/cincoproducts/CincoWaitMate/zan.PNG",
-    "images/pages/categories/cinco/cincoproducts/CincoWaitMate/learning.PNG"
+    "images/pages/categories/health/WaitMate/logo.PNG",
+    "images/pages/categories/health/WaitMate/ssgoldblum.PNG",
+    "images/pages/categories/health/WaitMate/take.PNG",
+    "images/pages/categories/health/WaitMate/2pills.PNG",
+    "images/pages/categories/health/WaitMate/NoWait.PNG"
   ];
 
   const processSteps = [
@@ -16,25 +16,25 @@ const CincoWaitMate = () => {
       title: "Event Selection",
       description: "Choose which future event you'd like to skip to (birthdays, award shows, beach blasts, etc.)",
       warning: "Events may or may not actually occur during sleep",
-      image: "images/pages/categories/cinco/cincoproducts/CincoWaitMate/selection.PNG"
+      image: "images/pages/categories/health/WaitMate/selection.PNG"
     },
     {
       title: "Dosage Calculation",
       description: "Take one pill per day you want to skip (simple math may become impossible after first dose)",
-      warning: "Do not exceed 7 pills unless supervised by Xan",
-      image: "images/pages/categories/cinco/cincoproducts/CincoWaitMate/dosage.PNG"
+      warning: "Do not exceed 7 pills unless supervised by Zan",
+      image: "images/pages/categories/health/WaitMate/bottle.PNG"
     },
     {
       title: "Deep Sleep Initiation",
       description: "Enter a deep, deep sleep until your chosen event arrives",
       warning: "Sleep may continue past event",
-      image: "images/pages/categories/cinco/cincoproducts/CincoWaitMate/sleep.PNG"
+      image: "images/pages/categories/health/WaitMate/sleep.PNG"
     },
     {
       title: "Memory Recovery",
-      description: "Begin Xan's Learning Songs Volume 1 for basic object identification",
+      description: "Begin Zan's Learning Songs Volume 1 for basic object identification",
       warning: "Results may vary based on number of objects remembered",
-      image: "images/pages/categories/cinco/cincoproducts/CincoWaitMate/recovery.PNG"
+      image: "images/pages/categories/health/WaitMate/Zan.PNG"
     }
   ];
 
@@ -50,19 +50,9 @@ const CincoWaitMate = () => {
       icon: "🌟"
     },
     {
-      title: "Xan Support System",
-      description: "Complimentary memory recovery program with Xan (makes it fun!)",
+      title: "Zan Support System",
+      description: "Complimentary memory recovery program with Zan (makes it fun!)",
       icon: "🎓"
-    },
-    {
-      title: "Learning Songs",
-      description: "Includes Volume 1 of Xan's Learning Songs for basic object recognition",
-      icon: "🎵"
-    },
-    {
-      title: "Memory Management",
-      description: "Selective memory erasure ensures you won't remember the wait",
-      icon: "🧠"
     }
   ];
 
@@ -70,19 +60,13 @@ const CincoWaitMate = () => {
     {
       text: "It's time to celebrate my career! Thanks, Wait Mate!",
       author: "Jeff Goldblum",
-      image: "images/pages/categories/cinco/cincoproducts/CincoWaitMate/jeff.PNG",
+      image: "images/pages/categories/health/WaitMate/goldblum.PNG",
       verified: true
     },
     {
-      text: "That is a blanket made of horse hair...",
-      author: "Recovering User",
-      image: "images/pages/categories/cinco/cincoproducts/CincoWaitMate/user.PNG",
-      verified: true
-    },
-    {
-      text: "Beach blast... beach blast... Rick? Rick? RICK?",
-      author: "Cotton",
-      image: "images/pages/categories/cinco/cincoproducts/CincoWaitMate/cotton.PNG",
+      text: "Oh Jeff... Handsome for a man",
+      author: "Eric",
+      image: "images/pages/categories/health/WaitMate/handsome.PNG",
       verified: true
     }
   ];
@@ -90,12 +74,10 @@ const CincoWaitMate = () => {
   const warnings = [
     "Overuse will cause serious memory loss",
     "Side effects may include forgetting what common objects are called",
-    "Xan's availability subject to temporal displacement",
+    "Zan's availability subject to temporal displacement",
     "Learning Songs Volume 1 is non-optional after memory loss",
-    "Beach Blasts may occur without warning",
     "Time skipping may result in missing important life events",
     "Memory recovery not guaranteed",
-    "May cause excessive repetition of the name 'Rick'",
     "Some users may require relearning what a 'turtle sleeping in a beer' is"
   ];
 
@@ -112,7 +94,7 @@ const CincoWaitMate = () => {
       <BookAnAppointment 
         productName="CINCO™ Wait Mate"
         offerTitle="Time Skip Special!"
-        offerText="Buy now and receive a complimentary copy of Xan's Learning Songs Volume 1! (You'll need it)"
+        offerText="Buy now and receive a complimentary copy of Zan's Learning Songs Volume 1! (You'll need it)"
         offerDisclaimer="CINCO™ not responsible for lost memories, missed events, or inability to identify common objects"
         buttonText="Skip To The Good Part"
         certificationBody="Department of Temporal Pharmaceuticals and Object Recognition"

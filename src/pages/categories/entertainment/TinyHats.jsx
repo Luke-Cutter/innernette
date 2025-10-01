@@ -115,7 +115,7 @@ const TinyHats = () => {
 
   // Testimonials
   const testimonials = [
-    { name: "Tiny Tim", text: "I never leave home without my Tiny Hat collection!" },
+    { name: "Peewee Paul", text: "I never leave home without my Tiny Hat collection!" },
     { name: "Mini Martha", text: "The cake toppers were a hit at my daughter's wedding!" },
     { name: "Lil' Larry", text: "I wear my Secret Hat everywhere. It's my little secret!" },
   ];
@@ -893,7 +893,7 @@ const TinyHats = () => {
             </div>
             <div className="mt-3 text-xs">
               <div className="animate-pulse text-blue-800 font-black mb-2">
-                This site best viewed with Microsoft Internet Explorer 6.0 or Netscape Navigator
+                This site best viewed with Dangus Web Navigator 10000 2 Personal Computation Device
               </div>
               <div className="flex justify-center space-x-3 mt-2">
                 <div className="h-6 px-3 py-1 rounded text-white font-bold text-xs" style={{
@@ -906,7 +906,7 @@ const TinyHats = () => {
                   background: 'linear-gradient(135deg, #ff9800, #f57c00)',
                   border: '1px solid #ef6c00'
                 }}>
-                  WebRings
+                  WebRings & CincoScript™
                 </div>
                 <div className="h-6 px-3 py-1 rounded text-white font-bold text-xs" style={{
                   background: 'linear-gradient(135deg, #2196f3, #1976d2)',

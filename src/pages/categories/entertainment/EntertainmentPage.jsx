@@ -66,11 +66,11 @@ const EntertainmentPage = () => {
           tags: ["Variety", "Music"]
         },
         {
-          title: "Tiny Dance Off",
-          link: "/TinyDanceOff",
-          image: "images/pages/categories/entertainment/CatPage/DanceOff.PNG",
-          time: "Competition",
-          tags: ["Dance", "Competition"]
+          title: "Tim And Eric .CINCO!",
+          link: "/TimAndEric",
+          image: "images/pages/categories/entertainment/CatPage/TimNEric.PNG",
+          time: "Shrek.com",
+          tags: ["Comedy", "CINCO™ Affiliate Status"]
         },
         {
           title: "Where's My Chippy?",

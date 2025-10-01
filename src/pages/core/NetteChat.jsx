@@ -1,4 +1,3 @@
-// src/pages/NetteChat.jsx
 import React, { useState, useRef, useEffect } from 'react';
 import { AlertTriangle } from 'lucide-react';
 
@@ -33,7 +32,7 @@ const CHAT_PERSONALITIES = {
       'Can\'t stop thinking about your dad!',
       'You are going to give me your dad\'s email address.',
       'I can\'t wait to meet your pap-pap',
-      'Honey, you were my pupsy-pups. And i\'m going to miss you running around the old colonial Dutch house playing playing barbecue meat games with your old pep-pep. And I\'m not always going to be around to help you connect with the internet via Wi-Fi. You got a new man for that now, he\'s not a cute man- but he is an okay man. I mean you picked him!',
+      'Honey, you were my pupsy-pups. And i\'m going to miss you running around the old colonial Dutch house playing playing barbecue meat games with your old pep-pep. And I\'m not always going to be around to help you connect to the internet via Wi-Fi. You got a new man for that now, he\'s not a cute man- but he is an okay man. I mean you picked him!',
       'Chrimbus is not all about fun and games, you gotta make sure you stay warm. You don\'t want to get frostbite!',
       'I think I\'ll take a walk through this forest',
       'I didn\'t pack my [CENSORED] gloves kids!',
@@ -220,8 +219,7 @@ const NetteChat = () => {
     setIsTransitioning(false);
   };
 
-  const handleSendMessage = (e) => {
-    e.preventDefault();
+  const handleSendMessage = () => {
     if (!inputMessage.trim() || !selectedPersonality) return;
 
     const newMessages = [
@@ -258,19 +256,40 @@ const NetteChat = () => {
     setInputMessage('');
   };
 
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      handleSendMessage();
+    }
+  };
+
   return (
-    <div className="bg-gradient-to-b from-blue-700 via-teal-600 to-blue-800 p-4">
+    <div className="bg-gradient-to-b from-blue-700 via-teal-600 to-blue-800 p-4 relative">
+      <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ opacity: 0.3 }}>
+        <defs>
+          <pattern id="stipple" x="0" y="0" width="4" height="4" patternUnits="userSpaceOnUse">
+            <circle cx="1" cy="1" r="0.5" fill="black" opacity="0.2" />
+            <circle cx="3" cy="3" r="0.5" fill="black" opacity="0.15" />
+            <circle cx="2" cy="3" r="0.4" fill="black" opacity="0.1" />
+          </pattern>
+        </defs>
+        <rect x="0" y="0" width="100%" height="100%" fill="url(#stipple)" />
+      </svg>
+
       <AudioPlayer 
         src={audioState.src} 
         timestamp={audioState.timestamp}
       />
-      <div className="h-[600px] w-[780px] mx-auto bg-blue-100 rounded shadow-xl flex flex-col">
+      <div className="h-[600px] w-[780px] mx-auto bg-blue-100 rounded shadow-xl flex flex-col relative z-10">
         <div className="h-8 bg-gradient-to-r from-blue-400 to-blue-500 flex items-center px-2 rounded-t">
           <span className="text-white font-bold">CINCO NetteChat™ 2.5 (Formerly Inner-chat)</span>
         </div>
 
-        <div className="flex flex-grow bg-gradient-to-b from-blue-700 via-teal-600 to-blue-800 overflow-hidden">
-          <div className="w-[600px] flex flex-col bg-white border-r border-gray-200">
+        <div className="flex flex-grow bg-gradient-to-b from-blue-700 via-teal-600 to-blue-800 overflow-hidden relative">
+          <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ opacity: 0.2 }}>
+            <rect x="0" y="0" width="100%" height="100%" fill="url(#stipple)" />
+          </svg>
+
+          <div className="w-[600px] flex flex-col bg-white border-r border-gray-200 relative z-10">
             <div 
               className={`flex-grow p-4 overflow-y-auto transition-opacity duration-300 ${
                 isTransitioning ? 'opacity-0' : 'opacity-100'
@@ -310,30 +329,31 @@ const NetteChat = () => {
               })}
             </div>
 
-            <form onSubmit={handleSendMessage} className="p-4 border-t border-gray-200">
+            <div className="p-4 border-t border-gray-200">
               <div className="flex gap-2">
                 <input
                   type="text"
                   value={inputMessage}
                   onChange={(e) => setInputMessage(e.target.value)}
+                  onKeyPress={handleKeyPress}
                   disabled={!selectedPersonality || isTransitioning}
                   placeholder={selectedPersonality ? "Type a message..." : "Select a personality first"}
                   className="flex-grow p-2 border border-gray-300 rounded"
                 />
                 <button
-                  type="submit"
+                  onClick={handleSendMessage}
                   disabled={!selectedPersonality || isTransitioning}
                   className="px-4 py-2 bg-blue-500 text-white rounded disabled:bg-gray-300 hover:bg-blue-600 transition-colors"
                 >
                   SEND
                 </button>
               </div>
-            </form>
+            </div>
           </div>
 
-          <div className="w-64 bg-blue-50 p-4">
+          <div className="w-64 bg-blue-50 p-4 flex flex-col relative z-10">
             <h2 className="text-lg font-bold mb-4">Select Personality:</h2>
-            <div className="space-y-4">
+            <div className="space-y-4 overflow-y-auto flex-grow pr-2">
               {Object.entries(CHAT_PERSONALITIES).map(([key, personality]) => (
                 <button
                   key={key}
@@ -365,7 +385,7 @@ const NetteChat = () => {
           To Report NetteChat™ Abuse, Contact CINCO™
         </div>
       </div>
-      <div className="w-[780px] mx-auto mt-8 bg-white rounded-lg shadow-xl overflow-hidden">
+      <div className="w-[780px] mx-auto mt-8 bg-white rounded-lg shadow-xl overflow-hidden relative z-10">
         <div className="bg-gradient-to-r from-red-600 to-red-700 p-4">
           <h2 className="text-3xl font-bold text-yellow-300 text-center font-serif tracking-wider">
             CINCO™ NetteChat™ Instructions Manual
@@ -420,4 +440,4 @@ const NetteChat = () => {
   );
 };
 
-export default NetteChat;    
+export default NetteChat;

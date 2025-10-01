@@ -89,6 +89,8 @@ import FocusOnComedy from './pages/categories/entertainment/FocusOnComedy.jsx';
 import JJPepper from './pages/categories/entertainment/JJPepper.jsx';
 import GrobanSingsCasey from './pages/categories/entertainment/GrobanSingsCasey.jsx';
 import TinyHats from './pages/categories/entertainment/TinyHats.jsx';
+import TinyDanceOff from './pages/categories/entertainment/TinyDanceOff.jsx';
+
 //Technical Pages
 import BrownScreenCalibration from './pages/categories/technology/BrownScreenCalibration.jsx';
 import ComputerExplosion from './pages/categories/technology/ComputerExplosion.jsx';
@@ -225,6 +227,7 @@ const App = () => {
           <Route path = "BeaverBoys" element={<BeaverBoys/>}/>
           <Route path = "DavidLiebeHart" element={<DavidLiebeHart/>}/>
           <Route path = "TinyHats" element={<TinyHats/>}/>
+          <Route path = "TinyDanceOff" element={<TinyDanceOff/>}/>
           {/* Health Pages*/}
           <Route path = "CincoFoodTube" element={<CincoFoodTube/>}/>
           <Route path = "TraggsTrough" element={<TraggsTrough/>}/>

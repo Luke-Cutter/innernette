@@ -1,4 +1,3 @@
-import React from 'react';
 import CincoProductLayout from '../../../components/layout/CincoProductLayout';
 import BookAnAppointment from '../../../components/shared/BookAnAppointment';
 

@@ -200,7 +200,7 @@ See your favorite sketches come to life in this fictional version of CINCO™'s 
     <td>56. Tim and Eric .CINCO!</td>
   </tr>
   <tr>
-    <td>57. Where's My Chippy (Not Finished)</td>
+    <td>57. Where's My Chippy</td>
     <td>58. The Universe</td>
     <td>59. Tiny Hats (Not Finished)</td>
   </tr>
@@ -212,7 +212,7 @@ See your favorite sketches come to life in this fictional version of CINCO™'s 
 <table align="center">
   <tr>
     <td>60. The Awesome Life of Richard Dunn</td>
-    <td>61. The Puppeting Style of David Liebe Hart (Not FInished)</td>
+    <td>61. The Puppeting Style of David Liebe Hart</td>
     <td>62. Jim Boonie's Free Real Estate</td>
   </tr>
 </table>

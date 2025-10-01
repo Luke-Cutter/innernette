@@ -197,7 +197,7 @@ See your favorite sketches come to life in this fictional version of CINCO™'s 
   <tr>
     <td>54. J.J. Pepper's Videography</td>
     <td>55. Beaver Boys Beaver Bounce</td>
-    <td>56. Tiny Dance Off (Not Finished)</td>
+    <td>56. Tim and Eric .CINCO!</td>
   </tr>
   <tr>
     <td>57. Where's My Chippy (Not Finished)</td>

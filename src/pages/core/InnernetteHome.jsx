@@ -444,7 +444,11 @@ const InnernetteHome = () => {
             (We may ignore your call based on past CINCO™ purchases)
           </span>
         </p>
-        
+        <p className="text-xs text-gray-600 mt-2">
+          <a href="https://github.com/Luke-Cutter/innernette"
+             target="_blank"
+             className="underline !text-[#0000EE] visited:!text-[#551A8B] hover:!text-[#EE0000] active:!text-[#FF0000] font-normal bg-transparent">Pump Your Git into the CodeHole™</a>
+        </p>
         <div className="grid grid-cols-3 gap-4 mt-4">
         </div>
         {/* Footer bar */}

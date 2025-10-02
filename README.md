@@ -202,7 +202,7 @@ See your favorite sketches come to life in this fictional version of CINCO™'s 
   <tr>
     <td>57. Where's My Chippy</td>
     <td>58. The Universe</td>
-    <td>59. Tiny Hats (Not Finished)</td>
+    <td>59. Tiny Hats</td>
   </tr>
 </table>
 

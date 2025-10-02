@@ -7,9 +7,7 @@ const CincoDPants = () => {
     "images/pages/categories/health/DPants/DPantsLogo.PNG",
     "images/pages/categories/health/DPants/NoLoafs.PNG",
     "images/pages/categories/health/DPants/Squirt.PNG",
-    "images/pages/categories/health/DPants/uncontrollablediarrhea.PNG",
-    "images/pages/categories/health/DPants/backyard.PNG"
-  ];
+    "images/pages/categories/health/DPants/uncontrollablediarrhea.PNG"  ];
 
   const processSteps = [
     {

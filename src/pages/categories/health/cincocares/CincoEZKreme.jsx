@@ -6,9 +6,9 @@ const CincoEZKreme = () => {
   const productImages = [
     "images/pages/categories/health/EZKreme/KremeLogo.PNG",
     "images/pages/categories/health/EZKreme/CincoLife.PNG",
-    "images/pages/categories/health/EZKreme/meeting.PNG",
-    "images/pages/categories/health/EZKreme/excuse.PNG",
-    "images/pages/categories/health/EZKreme/dpants.PNG"
+    "images/pages/categories/health/EZKreme/rub.PNG",
+    "images/pages/categories/health/EZKreme/diarrhea.PNG",
+    "images/pages/categories/health/EZKreme/paul.PNG"
   ];
 
   const processSteps = [

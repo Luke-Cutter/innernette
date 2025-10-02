@@ -6,9 +6,9 @@ const CincoManNip = () => {
   const productImages = [
     "images/pages/categories/health/ManNip/DuffyNip.PNG",
     "images/pages/categories/health/ManNip/spices.PNG",
-    "images/pages/categories/health/ManNip/application.PNG",
-    "images/pages/categories/health/ManNip/effects.PNG",
-    "images/pages/categories/health/ManNip/chess.PNG"
+    "images/pages/categories/health/ManNip/awakening.PNG",
+    "images/pages/categories/health/ManNip/purring.PNG",
+    "images/pages/categories/health/ManNip/keith.PNG"
   ];
 
   const processSteps = [

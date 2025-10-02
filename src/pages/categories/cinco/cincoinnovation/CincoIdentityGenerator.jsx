@@ -2,8 +2,22 @@
 // Links: Alexmeub: https://celeryman.alexmeub.com/
 //        skluck: https://github.com/skluck/celery-man
 
-import React, { useState, useEffect, useRef } from 'react';
-import BlinkingText from '../../../../components/shared/BlinkingText';
+import { useState, useEffect, useRef } from 'react';
+import { PhoneCall } from 'lucide-react';
+
+// Blinking text component
+const BlinkingText = ({ children }) => {
+  const [visible, setVisible] = useState(true);
+  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setVisible(v => !v);
+    }, 500);
+    return () => clearInterval(interval);
+  }, []);
+  
+  return <span style={{ visibility: visible ? 'visible' : 'hidden' }}>{children}</span>;
+};
 
 // Window style configuration
 const windowBaseStyle = "bg-[#edeced] overflow-hidden m-auto p-0 absolute text-center";
@@ -235,7 +249,9 @@ const CincoIdentityGenerator = () => {
   const [errorMessage, setErrorMessage] = useState(null);
   const [showOysterSmile, setShowOysterSmile] = useState(false);
   const [showPierreHolidayCard, setShowPierreHolidayCard] = useState(false);
+  const [showIncomingCall, setShowIncomingCall] = useState(false);
   const pierreVideoRef = useRef(null);
+  const callTimeoutRef = useRef(null);
   
   // Audio references
   const audioRefs = {
@@ -256,6 +272,16 @@ const CincoIdentityGenerator = () => {
     }
   };
 
+  // Audio control functions
+  const stopAllAudio = () => {
+    Object.values(audioRefs).forEach(ref => {
+      if (ref.current) {
+        ref.current.pause();
+        ref.current.currentTime = 0;
+      }
+    });
+  };
+
   // Boot sequence
   useEffect(() => {
     const interval = setInterval(() => {
@@ -274,15 +300,23 @@ const CincoIdentityGenerator = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Audio control functions
-  const stopAllAudio = () => {
-    Object.values(audioRefs).forEach(ref => {
-      if (ref.current) {
-        ref.current.pause();
-        ref.current.currentTime = 0;
+  // Incoming call timer
+  useEffect(() => {
+    callTimeoutRef.current = setTimeout(() => {
+      setShowIncomingCall(true);
+      setActiveWindows({});
+      stopAllAudio();
+      setPromptMessage("Excuse me Paul. Your wife is on the phone. It's an emergency.");
+      playVoiceLine('excusemepaul');
+    }, 30000);
+
+    return () => {
+      if (callTimeoutRef.current) {
+        clearTimeout(callTimeoutRef.current);
       }
-    });
-  };
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const playAudioTracks = (tracks) => {
     tracks.forEach(track => {
@@ -312,16 +346,14 @@ const CincoIdentityGenerator = () => {
             });
             setPromptMessage(sequences[sequence].prompt);
             
-            // Play voice line first
             playVoiceLine(sequences[sequence].voiceLine);
             
-            // Add delay before playing music and showing windows
             setTimeout(() => {
               playAudioTracks(sequences[sequence].audioTracks);
               setActiveWindows({
                 [sequence]: true
               });
-            }, 1600); // 5 second buffer for voice line
+            }, 1600);
             return 100;
           }
           return prev + 20;
@@ -426,57 +458,81 @@ const CincoIdentityGenerator = () => {
         message={promptMessage}
       />
     
-        {/* Oyster Smile Window */}
-        {showOysterSmile && (
+      {/* Oyster Smile Window */}
+      {showOysterSmile && (
         <div 
-            className={`${windowBaseStyle} w-[400px] `}
-            style={{ top: '100px', left: '50%', marginLeft: '-200px' }}
+          className={`${windowBaseStyle} w-[400px]`}
+          style={{ top: '100px', left: '50%', marginLeft: '-200px' }}
         >
-            <div className="bg-white border-2 border-gray-300">
+          <div className="bg-white border-2 border-gray-300">
             <WindowHeader 
-                title="Oyster Smiling" 
-                onClose={() => setShowOysterSmile(false)} 
+              title="Oyster Smiling" 
+              onClose={() => setShowOysterSmile(false)} 
             />
             <div className="h-[calc(100%-32px)] p-2 bg-white">
-                <img 
+              <img 
                 src="/images/pages/categories/cinco//CincoIdentityGenerator/oystersmilelarge.png"
                 alt="Oyster Smiling Large"
                 className="w-full h-full object-contain"
-                />
-            </div>
-            </div>
-        </div>
-        )}
-
-        {/* Pierre's Holiday Card Window */}
-        {showPierreHolidayCard && (
-          <div 
-            className={`${windowBaseStyle} w-[500px]`}
-            style={{ top: '100px', left: '50%', marginLeft: '-200px' }}
-          >
-            <div className="bg-white border-2 border-gray-300">
-              <WindowHeader 
-                title="Pierre's Holiday Card" 
-                onClose={() => {
-                  setShowPierreHolidayCard(false);
-                  if (pierreVideoRef.current) {
-                    pierreVideoRef.current.pause();
-                    pierreVideoRef.current.currentTime = 0;
-                  }
-                }} 
               />
-              <div className="h-[300px] p-2 bg-black">
-                <video
-                  ref={pierreVideoRef}
-                  className="w-full h-full object-cover"
-                  src="/video/CincoIdentityGenerator/pierre-holiday.mp4"
-                  autoPlay
-                  loop
-                />
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Pierre's Holiday Card Window */}
+      {showPierreHolidayCard && (
+        <div 
+          className={`${windowBaseStyle} w-[500px]`}
+          style={{ top: '100px', left: '50%', marginLeft: '-200px' }}
+        >
+          <div className="bg-white border-2 border-gray-300">
+            <WindowHeader 
+              title="Pierre's Holiday Card" 
+              onClose={() => {
+                setShowPierreHolidayCard(false);
+                if (pierreVideoRef.current) {
+                  pierreVideoRef.current.pause();
+                  pierreVideoRef.current.currentTime = 0;
+                }
+              }} 
+            />
+            <div className="h-[300px] p-2 bg-black">
+              <video
+                ref={pierreVideoRef}
+                className="w-full h-full object-cover"
+                src="/video/CincoIdentityGenerator/pierre-holiday.mp4"
+                autoPlay
+                loop
+              />
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Incoming Call Window */}
+      {showIncomingCall && (
+        <div 
+          className={`${windowBaseStyle} w-[300px]`}
+          style={{ top: '50%', left: '50%', marginLeft: '-150px', marginTop: '-200px', zIndex: 1000 }}
+        >
+          <div className="bg-white border-2 border-gray-300">
+            <WindowHeader 
+              title="INCOMING CALL" 
+              onClose={() => setShowIncomingCall(false)} 
+            />
+            <div className="p-4 bg-white flex flex-col items-center gap-4">
+              <div className="w-full bg-black text-red-500 text-center py-2 font-mono text-2xl font-bold">
+                545-334-AB
+              </div>
+              <div className="w-full bg-pink-600 p-8 flex flex-col items-center gap-2">
+                <PhoneCall className="text-white"/>
+                <div className="text-white font-black text-2xl tracking-widest">WIFE</div>
               </div>
             </div>
           </div>
-        )}
+        </div>
+      )}
 
       {/* Video Windows */}
       {Object.entries(sequences).map(([key, sequence]) => 

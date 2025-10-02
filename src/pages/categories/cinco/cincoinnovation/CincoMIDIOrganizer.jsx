@@ -168,10 +168,10 @@ const CincoMidiOrganizer = () => {
   );
 
   return (
-    <div className="h-full bg-black p-4 font-mono text-green-400">
+    <div className="bg-black h-screen p-4 font-mono text-green-400">
       {currentlyPlaying && <PlayingPopup song={currentlyPlaying} />}
       {currentStep < setupSteps.length ? (
-        <div className="flex items-center justify-center h-full">
+        <div className="flex items-center justify-center">
           <div className="bg-black border-2 border-green-400 p-6 max-w-md">
             <h2 className="text-xl mb-4">{setupSteps[currentStep]}</h2>
             <button 
@@ -183,7 +183,7 @@ const CincoMidiOrganizer = () => {
           </div>
         </div>
       ) : (
-        <div className="h-full">
+        <div className="h-screen">
           <div className="flex gap-4 mb-4">
             {[
               { display: 'Name', key: 'name' },
@@ -216,7 +216,7 @@ const CincoMidiOrganizer = () => {
             )}
           </form>
           
-          <div className="h-[calc(100%-8rem)] overflow-y-hidden font-mono">
+          <div className="h-[calc(100%-8rem)] font-mono">
             {!sorted ? (
               <div ref={scrollRef} className="whitespace-pre-wrap">
                 {unsortedText.map((line, idx) => (

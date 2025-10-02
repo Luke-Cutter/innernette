@@ -212,7 +212,7 @@ const OrderFormModal = ({ isOpen, onClose, product, options }) => {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-      <div className="bg-white p-6 rounded-lg max-w-xl w-full max-h-[90vh] overflow-y-auto m-4">
+      <div className="bg-white p-6 rounded-lg max-w-xl w-full m-4">
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
             CINCO™ ORDER FORM
@@ -382,7 +382,7 @@ const InnernetteShop = () => {
   const [currentStore, setCurrentStore] = useState('Pants');
   
   return (
-    <div className="max-h-screen flex flex-col bg-gray-100">
+    <div className="flex flex-col bg-gray-100">
       <Header />
       <div className="flex-1 overflow-hidden">
         <div className="h-full flex bg-white shadow-xl">

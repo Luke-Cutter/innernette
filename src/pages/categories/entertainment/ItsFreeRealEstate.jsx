@@ -97,7 +97,7 @@ const ItsFreeRealEstate = () => {
               className="w-full h-full object-cover relative z-10"
             />
           </div>
-          <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-64 h-12 bg-red-700 roof-shape border-4 border-red-900"></div>
+          <div className="absolute z-40 -top-6 left-1/2 transform -translate-x-1/2 w-64 h-12 bg-red-700 roof-shape border-4 border-red-900"></div>
           <div className="absolute -bottom-16 left-0 right-0 text-center">
             <div className="bg-yellow-400 text-red-700 text-lg font-black inline-block border-4 border-red-700 house-border" style={{animation: 'wiggle 2s ease-in-out infinite'}}>
               🏠 JIM BOONIE 🏠

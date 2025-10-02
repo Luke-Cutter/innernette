@@ -1,6 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { AlertTriangle, PartyPopper, Music, Skull, Wine, Shell, Zap, Star } from 'lucide-react';
-import GlitchText from '../../../components/shared/GlitchText';
+
+const GlitchText = ({ text, className }) => {
+  return (
+    <div className={`relative ${className}`}>
+      <span className="absolute top-0 left-0 text-red-500 opacity-70" style={{ clipPath: 'inset(0 0 50% 0)' }}>
+        {text}
+      </span>
+      <span className="absolute top-0 left-0 text-blue-500 opacity-70" style={{ clipPath: 'inset(50% 0 0 0)' }}>
+        {text}
+      </span>
+      <span className="relative z-10">{text}</span>
+    </div>
+  );
+};
 
 const BeaverBoysConstruction = () => {
   const [visitorCount, setVisitorCount] = useState(69);
@@ -20,9 +33,23 @@ const BeaverBoysConstruction = () => {
       }]);
     }, 500);
 
+    // Audio player
+    const audio = new Audio('music/beaverboys/beaverbounce.mp3');
+    audio.loop = true;
+    audio.volume = 0.5;
+    
+    // Play audio when component mounts
+    audio.play().catch(err => {
+      // Autoplay might be blocked by browser
+      console.log('Autoplay prevented:', err);
+    });
+
     return () => {
       clearInterval(interval);
       clearInterval(sparkleInterval);
+      // Stop and cleanup audio when component unmounts
+      audio.pause();
+      audio.currentTime = 0;
     };
   }, []);
 

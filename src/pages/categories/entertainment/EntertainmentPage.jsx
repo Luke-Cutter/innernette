@@ -1,4 +1,3 @@
-import React from 'react';
 import { Headphones, Star, Film } from 'lucide-react';
 import CategoryLayout from '../../../components/layout/CategoryLayout';
 
@@ -10,11 +9,11 @@ const EntertainmentPage = () => {
       icon: <Headphones className="w-5 h-5" />,
       items: [
         {
-          title: "Tim's Discount Prices VERSUS Eric's Premium Prices",
-          link: "/TimsDiscountPricesVersusEricsPremiumPrices",
-          image: "images/pages/categories/entertainment/CatPage/Prices.PNG",
+          title: "Beaver Boys Beaver Bounce Beach Blast",
+          link: "/BeaverBoys",
+          image: "images/pages/categories/entertainment/CatPage/BeaverBoys.PNG",
           time: "Special Event",
-          tags: ["Music", "Special", "CINCO™"]
+          tags: ["Variety", "Music"]
         },
         {
           title: "CINCO™ Presents: Groban Sings Casey",
@@ -31,46 +30,25 @@ const EntertainmentPage = () => {
           tags: ["Quallity CINCO™ Product", "Comedy"]
         },
         {
-          title: "Fitness Can Be E-Z with Tom Fredrickson",
-          link: "/CincoFitnessEZ",
-          image: "images/pages/categories/entertainment/CatPage/EZ.PNG",
-          time: "Now Streaming",
-          tags: ["Fitness", "Entertainment"]
-        },
-        {
-          title: "CINCO™ Presents: The Tairy Greene Machine",
-          link: "/TairyGreeneMachine",
-          image: "images/pages/categories/entertainment/CatPage/TairyGreeneMachine.jpg",
-          time: "Premium Content",
-          tags: ["Variety", "CINCO™"]
-        },
-        {
-          title: "Michael Ian Black: Focus on Comedy",
-          link: "/FocusOnComedy",
-          image: "images/pages/categories/entertainment/CatPage/FocusOnComedy.jpg",
-          time: "Special Feature",
-          tags: ["Comedy", "Standup"]
-        },
-        {
-          title: "J.J. Pepper's Videography",
+          title: "J.J. Pepper's Videography: Please Use US!",
           link: "/JJPepper",
           image: "images/pages/categories/entertainment/JJPepper/JJ1.PNG",
           time: "PLEASE USE US!",
           tags: ["Videography", "Photographs"]
         },
         {
-          title: "Beaver Boys Beaver Bounce",
-          link: "/BeaverBoys",
-          image: "images/pages/categories/entertainment/CatPage/BeaverBoys.PNG",
+          title: "Tim's Discount Prices VERSUS Eric's Premium Prices",
+          link: "/TimsDiscountPricesVersusEricsPremiumPrices",
+          image: "images/pages/categories/entertainment/CatPage/Prices.PNG",
           time: "Special Event",
-          tags: ["Variety", "Music"]
+          tags: ["Music", "Special", "CINCO™"]
         },
         {
-          title: "Tim And Eric .CINCO!",
-          link: "/TimAndEric",
-          image: "images/pages/categories/entertainment/CatPage/TimNEric.PNG",
-          time: "Shrek.com",
-          tags: ["Comedy", "CINCO™ Affiliate Status"]
+          title: "Fitness Can Be E-Z with Tom Fredrickson",
+          link: "/CincoFitnessEZ",
+          image: "images/pages/categories/entertainment/CatPage/EZ.PNG",
+          time: "Now Streaming",
+          tags: ["Fitness", "Entertainment"]
         },
         {
           title: "Where's My Chippy?",
@@ -92,6 +70,28 @@ const EntertainmentPage = () => {
           image: "images/pages/categories/entertainment/CatPage/TinyHats.PNG",
           time: "Now Open Sundays!",
           tags: ["Fashion", "Style"]
+        },
+        {
+          title: "CINCO™ Presents: The Tairy Greene Machine",
+          link: "/TairyGreeneMachine",
+          image: "images/pages/categories/entertainment/CatPage/TairyGreeneMachine.jpg",
+          time: "Premium Content",
+          tags: ["Variety", "CINCO™"]
+        },
+        {
+          title: "Michael Ian Black: Focus on Comedy",
+          link: "/FocusOnComedy",
+          image: "images/pages/categories/entertainment/CatPage/FocusOnComedy.jpg",
+          time: "Special Feature",
+          tags: ["Comedy", "Standup"]
+        },
+        
+        {
+          title: "Tim And Eric .CINCO! Launch Party!",
+          link: "/TimAndEric",
+          image: "images/pages/categories/entertainment/CatPage/TimNEric.PNG",
+          time: "Shrek.com",
+          tags: ["Comedy", "CINCO™ Affiliate Status"]
         }
       ]
     },

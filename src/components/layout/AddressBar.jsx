@@ -1,5 +1,4 @@
 // src/components/layout/AddressBar.jsx
-import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { ChevronLeft, ChevronRight, X, RotateCw, Search, Disc3} from 'lucide-react';
 

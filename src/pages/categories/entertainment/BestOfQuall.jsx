@@ -1,5 +1,4 @@
-import React from 'react';
-import CincoProductLayout from '../../../components/layout/CincoProductLayout';
+import CincoComedyLayout from '../../../components/layout/CincoComedyLayout';
 import BookAnAppointment from '../../../components/shared/BookAnAppointment';
 
 const BestOfQuall = () => {
@@ -83,7 +82,7 @@ const BestOfQuall = () => {
   ];
 
   return (
-    <CincoProductLayout
+    <CincoComedyLayout
       productName="CINCO™ The Best of James Quall"
       tagline="What Are You Waiting For? Quall Now!"
       productImages={productImages}
@@ -100,7 +99,7 @@ const BestOfQuall = () => {
         buttonText="Achieve Your Quall-tential"
         certificationBody="Department of Quall-ity Impression Management"
       />
-    </CincoProductLayout>
+    </CincoComedyLayout>
   );
 };
 
